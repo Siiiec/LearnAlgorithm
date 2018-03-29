@@ -2,10 +2,12 @@
 
 #include <iostream>
 #include <vector>
+#include <array>
 #include <string>
 #include <algorithm>
 
 constexpr int nil = -1;
+constexpr int elemNum = 40 + 1;
 
 struct Node
 {
@@ -59,8 +61,10 @@ public:
         int p;
         p = nodes[node.id].parent;
         nodes[node.id] = node;
+        
+        if(p != nil)
+            setParent(node.id, p);
 
-        setParent(node.id, p);
         setParent(node.left, node.id);
         setParent(node.right, node.id);
     }
@@ -160,11 +164,6 @@ public:
         return v;
     }
 
-    void reconstruct(const std::vector<int>& pre, const std::vector<int>& in)
-    {
-
-    }
-
 private:
 
     std::vector<Node> nodes;
@@ -202,9 +201,45 @@ private:
 
     }
 
-    Node reconstruct_(const std::vector<int>& in, const std::vector<int>& in2pre)
+    Node reconstruct(const std::vector<int>& in, const std::array<int, elemNum>& pre2in)
+    {
+        using namespace std;
+
+        vector<int> pre(in);
+
+        sort(pre.begin(), pre.end(), [&pre2in](int a, int b)
+        {
+            return pre2in[a] > pre2in[b];
+        });
+
+        Node& c = nodes[pre[0]];
+        c.id = pre[0];
+        
+        vector<int> left;
+        //TODO
+
+
+        
+    }
+
+};
+
+class ReconstructableBinaryTree : public BinaryTree
+{
+public:
+
+    void reconstruct()
     {
 
+    }
+
+private:
+
+    Node reconstruct(const std::vector<int>& pre, const std::array<int, elemNum>& pre2in)
+    {
+        Node node;
+
+        
     }
 
 };

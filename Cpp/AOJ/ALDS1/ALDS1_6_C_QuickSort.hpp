@@ -20,15 +20,15 @@ struct Card
     }
 };
 
-std::istream& operator>>(std::istream& is, Card& value)
+std::istream& operator>>(std::istream& is, Card& key)
 {
-    is >> value.suit >> value.num;
+    is >> key.suit >> key.num;
     return is;
 }
 
-std::ostream& operator<<(std::ostream& os, const Card& value)
+std::ostream& operator<<(std::ostream& os, const Card& key)
 {
-    os << value.suit << " " << value.num;
+    os << key.suit << " " << key.num;
     return os;
 }
 

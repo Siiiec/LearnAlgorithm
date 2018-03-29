@@ -37,6 +37,18 @@
     <ClInclude Include="AOJ\ALDS1\ALDS1_7_D_ReconstructionOfATree.hpp">
       <Filter>ALDS1</Filter>
     </ClInclude>
+    <ClInclude Include="ALDS1_8_A_BinarySearchTree1.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_8_A_BinarySearchTree1.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_8_B_BinarySearchTree2.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_8_C_BinarySearchTree3.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ALDS1">
