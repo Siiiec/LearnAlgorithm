@@ -122,7 +122,6 @@ private:
             n->key = next->key;
             erase(next);
         }
-
         n = nullptr;
     }
 
