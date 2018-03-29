@@ -1,33 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_10_C_DP_LCS.hpp">
+      <Filter>ALDS1</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_10_A_DP_Fibonacci.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_10_B_DP_Matrix.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_6_A_CountingSort.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_6_B_Partition.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_6_C_QuickSort.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_6_D_MinimumCostSort.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_7_A_RootedTrees.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_7_B_BinaryTrees.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_7_C_TreeWalk.hpp">
+      <Filter>ALDS1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\ALDS1_7_D_ReconstructionOfATree.hpp">
+      <Filter>ALDS1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Cpp.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+    <Filter Include="ALDS1">
+      <UniqueIdentifier>{41b94c94-ddfc-4b31-9049-f7aaf3f73794}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
