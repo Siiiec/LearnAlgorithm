@@ -1,5 +1,5 @@
 #include <iostream>
-#include "AOJ\ALDS1\ALDS1_8_C_BinarySearchTree3.hpp"
+#include "AOJ\ALDS1\ALDS1_9_C_PriorityQueue.hpp"
 
 int main()
 {

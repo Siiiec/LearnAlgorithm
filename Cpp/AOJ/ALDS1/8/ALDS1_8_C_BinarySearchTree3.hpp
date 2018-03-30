@@ -115,6 +115,7 @@ private:
             child->parent = p;
             if (p->left == n)   p->left = child;
             else                p->right = child;
+            
         }
         else if (count == 2)
         {
