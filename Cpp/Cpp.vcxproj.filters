@@ -7,76 +7,88 @@
     <Filter Include="ALDS1">
       <UniqueIdentifier>{41b94c94-ddfc-4b31-9049-f7aaf3f73794}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\6">
+    <Filter Include="ALDS1\6_SortII">
       <UniqueIdentifier>{40b0bbc4-30c8-41bc-812f-77da26f8b164}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\7">
+    <Filter Include="ALDS1\7_Tree">
       <UniqueIdentifier>{c82492b0-9583-4aa2-ae8f-a870e4cfad62}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\8">
+    <Filter Include="ALDS1\8_BinarySearchTree">
       <UniqueIdentifier>{28b94f82-b58d-4d92-8fbd-3b7f646c6dfb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\9">
+    <Filter Include="ALDS1\9_Heaps">
       <UniqueIdentifier>{2bf24b73-1640-4f2c-a5f2-014386efde14}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\10">
+    <Filter Include="ALDS1\10_DynamicProgramming">
       <UniqueIdentifier>{f3eec075-b238-46c4-a5bc-c238e34d8a6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ALDS1\11">
+    <Filter Include="ALDS1\11_GraphI">
       <UniqueIdentifier>{a93d1517-daeb-468f-ba30-25b10ed57edd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_A_CountingSort.hpp">
-      <Filter>ALDS1\6</Filter>
+    <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
+      <Filter>ALDS1\6_SortII</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_B_Partition.hpp">
-      <Filter>ALDS1\6</Filter>
+    <ClInclude Include="AOJ\ALDS1\6_SortII\B_Partition.hpp">
+      <Filter>ALDS1\6_SortII</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_C_QuickSort.hpp">
-      <Filter>ALDS1\6</Filter>
+    <ClInclude Include="AOJ\ALDS1\6_SortII\C_QuickSort.hpp">
+      <Filter>ALDS1\6_SortII</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_D_MinimumCostSort.hpp">
-      <Filter>ALDS1\6</Filter>
+    <ClInclude Include="AOJ\ALDS1\6_SortII\D_MinimumCostSort.hpp">
+      <Filter>ALDS1\6_SortII</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_A_RootedTrees.hpp">
-      <Filter>ALDS1\7</Filter>
+    <ClInclude Include="AOJ\ALDS1\7_Tree\A_RootedTrees.hpp">
+      <Filter>ALDS1\7_Tree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_B_BinaryTrees.hpp">
-      <Filter>ALDS1\7</Filter>
+    <ClInclude Include="AOJ\ALDS1\7_Tree\B_BinaryTrees.hpp">
+      <Filter>ALDS1\7_Tree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_C_TreeWalk.hpp">
-      <Filter>ALDS1\7</Filter>
+    <ClInclude Include="AOJ\ALDS1\7_Tree\C_TreeWalk.hpp">
+      <Filter>ALDS1\7_Tree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_D_ReconstructionOfATree.hpp">
-      <Filter>ALDS1\7</Filter>
+    <ClInclude Include="AOJ\ALDS1\7_Tree\D_ReconstructionOfATree.hpp">
+      <Filter>ALDS1\7_Tree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_A_BinarySearchTree1.hpp">
-      <Filter>ALDS1\8</Filter>
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\C_BinarySearchTree3.hpp">
+      <Filter>ALDS1\8_BinarySearchTree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_B_BinarySearchTree2.hpp">
-      <Filter>ALDS1\8</Filter>
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\A_BinarySearchTree1.hpp">
+      <Filter>ALDS1\8_BinarySearchTree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_C_BinarySearchTree3.hpp">
-      <Filter>ALDS1\8</Filter>
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\B_BinarySearchTree2.hpp">
+      <Filter>ALDS1\8_BinarySearchTree</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_A_CompleteBinaryTree.hpp">
-      <Filter>ALDS1\9</Filter>
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\B_MaximumHeap.hpp">
+      <Filter>ALDS1\9_Heaps</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_B_MaximumHeap.hpp">
-      <Filter>ALDS1\9</Filter>
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\C_PriorityQueue.hpp">
+      <Filter>ALDS1\9_Heaps</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_C_PriorityQueue.hpp">
-      <Filter>ALDS1\9</Filter>
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\A_CompleteBinaryTree.hpp">
+      <Filter>ALDS1\9_Heaps</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_A_DP_Fibonacci.hpp">
-      <Filter>ALDS1\10</Filter>
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\B_DP_Matrix.hpp">
+      <Filter>ALDS1\10_DynamicProgramming</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_B_DP_Matrix.hpp">
-      <Filter>ALDS1\10</Filter>
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\C_DP_LCS.hpp">
+      <Filter>ALDS1\10_DynamicProgramming</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_C_DP_LCS.hpp">
-      <Filter>ALDS1\10</Filter>
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\A_DP_Fibonacci.hpp">
+      <Filter>ALDS1\10_DynamicProgramming</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\A_Graph.hpp">
+      <Filter>ALDS1\11_GraphI</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\B_DepthFirstSearch.hpp">
+      <Filter>ALDS1\11_GraphI</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\C_BreadthFirstSearch.hpp">
+      <Filter>ALDS1\11_GraphI</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\D_ConnectedComponents.hpp">
+      <Filter>ALDS1\11_GraphI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

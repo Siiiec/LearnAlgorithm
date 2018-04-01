@@ -126,23 +126,27 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_A_DP_Fibonacci.hpp" />
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_B_DP_Matrix.hpp" />
-    <ClInclude Include="AOJ\ALDS1\10\ALDS1_10_C_DP_LCS.hpp" />
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_A_CountingSort.hpp" />
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_B_Partition.hpp" />
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_C_QuickSort.hpp" />
-    <ClInclude Include="AOJ\ALDS1\6\ALDS1_6_D_MinimumCostSort.hpp" />
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_A_RootedTrees.hpp" />
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_B_BinaryTrees.hpp" />
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_C_TreeWalk.hpp" />
-    <ClInclude Include="AOJ\ALDS1\7\ALDS1_7_D_ReconstructionOfATree.hpp" />
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_A_BinarySearchTree1.hpp" />
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_B_BinarySearchTree2.hpp" />
-    <ClInclude Include="AOJ\ALDS1\8\ALDS1_8_C_BinarySearchTree3.hpp" />
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_A_CompleteBinaryTree.hpp" />
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_B_MaximumHeap.hpp" />
-    <ClInclude Include="AOJ\ALDS1\9\ALDS1_9_C_PriorityQueue.hpp" />
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\A_DP_Fibonacci.hpp" />
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\B_DP_Matrix.hpp" />
+    <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\C_DP_LCS.hpp" />
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\A_Graph.hpp" />
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\B_DepthFirstSearch.hpp" />
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\C_BreadthFirstSearch.hpp" />
+    <ClInclude Include="AOJ\ALDS1\11_GraphI\D_ConnectedComponents.hpp" />
+    <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp" />
+    <ClInclude Include="AOJ\ALDS1\6_SortII\B_Partition.hpp" />
+    <ClInclude Include="AOJ\ALDS1\6_SortII\C_QuickSort.hpp" />
+    <ClInclude Include="AOJ\ALDS1\6_SortII\D_MinimumCostSort.hpp" />
+    <ClInclude Include="AOJ\ALDS1\7_Tree\A_RootedTrees.hpp" />
+    <ClInclude Include="AOJ\ALDS1\7_Tree\B_BinaryTrees.hpp" />
+    <ClInclude Include="AOJ\ALDS1\7_Tree\C_TreeWalk.hpp" />
+    <ClInclude Include="AOJ\ALDS1\7_Tree\D_ReconstructionOfATree.hpp" />
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\A_BinarySearchTree1.hpp" />
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\B_BinarySearchTree2.hpp" />
+    <ClInclude Include="AOJ\ALDS1\8_BinarySearchTrees\C_BinarySearchTree3.hpp" />
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\A_CompleteBinaryTree.hpp" />
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\B_MaximumHeap.hpp" />
+    <ClInclude Include="AOJ\ALDS1\9_Heaps\C_PriorityQueue.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
