@@ -1,12 +1,12 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "AOJ\ALDS1\11_GraphI\D_ConnectedComponents.hpp"
+#include "AOJ\ALDS1\12_GraphII\A_MinimumSpannningTree.hpp"
 
-using namespace std;
 
 int main()
 {
+    using namespace std;
     priority_queue<int, vector<int>, greater<int>> qu;
     
     for (int i = 0; i < 10; ++i)

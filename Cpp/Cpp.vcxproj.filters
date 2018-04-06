@@ -25,6 +25,9 @@
     <Filter Include="ALDS1\11_GraphI">
       <UniqueIdentifier>{a93d1517-daeb-468f-ba30-25b10ed57edd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ALDS1\12_GraphII">
+      <UniqueIdentifier>{d58682da-20f5-4e44-9dbe-6d2b8420119b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="AOJ\ALDS1\11_GraphI\D_ConnectedComponents.hpp">
       <Filter>ALDS1\11_GraphI</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\12_GraphII\A_MinimumSpannningTree.hpp">
+      <Filter>ALDS1\12_GraphII</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
