@@ -21,21 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TechFUL\00_Practice\01_helloworld.py" />
-    <Compile Include="Python3.py" />
-    <Compile Include="TechFUL\01_Beginner\01_helloworld.py" />
-    <Compile Include="TechFUL\01_Beginner\02_Echo.py" />
-    <Compile Include="TechFUL\01_Beginner\03_division.py" />
-    <Compile Include="TechFUL\01_Beginner\04_arithmetic.py" />
-    <Compile Include="TechFUL\01_Beginner\05_shopping.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\00_Practice\" />
     <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\" />
     <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\00_Practice\" />
     <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\01_Beginner\" />
+    <Folder Include="TechFUL\" />
+    <Folder Include="TechFUL\00_Practice\" />
+    <Folder Include="TechFUL\01_Beginner\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
