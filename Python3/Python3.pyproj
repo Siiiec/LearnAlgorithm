@@ -27,10 +27,14 @@
     <Compile Include="TechFUL\01_Beginner\02_Echo.py" />
     <Compile Include="TechFUL\01_Beginner\03_division.py" />
     <Compile Include="TechFUL\01_Beginner\04_arithmetic.py" />
+    <Compile Include="TechFUL\01_Beginner\05_shopping.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\00_Practice\" />
     <Folder Include="TechFUL\" />
+    <Folder Include="TechFUL\00_Practice\" />
     <Folder Include="TechFUL\01_Beginner\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
