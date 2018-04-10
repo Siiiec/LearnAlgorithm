@@ -6,18 +6,6 @@
 
 int main()
 {
-    using namespace std;
-    priority_queue<int, vector<int>, greater<int>> qu;
-    
-    for (int i = 0; i < 10; ++i)
-        qu.push(i);
-
-    for (int i = 0; i < 10; ++i)
-    {
-        cout << qu.top();
-        qu.pop();
-    }
-
-    //solve();
+    solve();
     return 0;
 }

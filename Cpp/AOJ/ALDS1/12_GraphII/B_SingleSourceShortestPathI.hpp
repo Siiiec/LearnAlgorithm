@@ -7,6 +7,8 @@
 #include <functional>
 #include <numeric>
 
+//TODO
+
 template <class T>
 using vec = std::vector<T>;
 
@@ -32,7 +34,7 @@ int prim(const vec<vec<Edge>>& edges)
     {
         int minCost {inf};
         int u {};
-        
+
         for (int i = 0; i < n; ++i)
         {
             if (!reached[i] && distances[i] < minCost)
@@ -41,7 +43,7 @@ int prim(const vec<vec<Edge>>& edges)
                 minCost = distances[i];
             }
         }
-        
+
         if (minCost == inf)
             break;
 
@@ -63,6 +65,28 @@ int prim(const vec<vec<Edge>>& edges)
     int sum = std::accumulate(distances.begin(), distances.end(), 0);
 
     return sum;
+}
+
+vec<int> dijkstra(const vec<vec<Edge>>& edges)
+{
+    const int n = edges.size();
+    vec<int> distances(n, inf);
+    vec<bool> reached(n, false);
+    vec<int> parents(n, nil);
+    
+    reached[0] = true;
+    distances[0] = 0;
+
+    while (true)
+    {
+        int minCost {inf};
+        int u {};
+
+        for (int i = 0; i < n; ++i)
+        {
+            if(!reached[i])
+        }
+    }
 }
 
 void solve()
