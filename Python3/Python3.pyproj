@@ -30,9 +30,11 @@
     <Compile Include="TechFUL\01_Beginner\05_shopping.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TechFUL\01_Beginner\06_string_repetition.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="D:\koki_D\Documents\Visual Studio 2017\Projects\LearnAlgorithm\Python3\TechFUL\00_Practice\" />
     <Folder Include="TechFUL\" />
     <Folder Include="TechFUL\00_Practice\" />
     <Folder Include="TechFUL\01_Beginner\" />
