@@ -30,7 +30,7 @@
     <Compile Include="TechFUL\01_Beginner\05_shopping.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TechFUL\01_Beginner\06_string_repetition.py">
+    <Compile Include="TechFUL\01_Beginner\06_graph1.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
