@@ -135,6 +135,7 @@
     <ClInclude Include="AOJ\ALDS1\11_GraphI\D_ConnectedComponents.hpp" />
     <ClInclude Include="AOJ\ALDS1\12_GraphII\A_MinimumSpannningTree.hpp" />
     <ClInclude Include="AOJ\ALDS1\12_GraphII\B_SingleSourceShortestPathI.hpp" />
+    <ClInclude Include="AOJ\ALDS1\12_GraphII\C_SingleSourceShortestPathII.hpp" />
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp" />
     <ClInclude Include="AOJ\ALDS1\6_SortII\B_Partition.hpp" />
     <ClInclude Include="AOJ\ALDS1\6_SortII\C_QuickSort.hpp" />

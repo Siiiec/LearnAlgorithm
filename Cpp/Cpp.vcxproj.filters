@@ -99,5 +99,8 @@
     <ClInclude Include="AOJ\ALDS1\12_GraphII\B_SingleSourceShortestPathI.hpp">
       <Filter>ALDS1\12_GraphII</Filter>
     </ClInclude>
+    <ClInclude Include="AOJ\ALDS1\12_GraphII\C_SingleSourceShortestPathII.hpp">
+      <Filter>ALDS1\12_GraphII</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
