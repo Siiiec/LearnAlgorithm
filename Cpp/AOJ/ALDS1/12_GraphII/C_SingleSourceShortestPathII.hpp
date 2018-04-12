@@ -6,20 +6,31 @@
 #include <utility>
 #include <functional>
 #include <numeric>
-
-//TODO
+#include <limits>
 
 template <class T>
 using vec = std::vector<T>;
 
 constexpr int nil = -1;
-constexpr int inf = 1 << 30;
+constexpr int inf = std::numeric_limits<int>::max();
 
 struct Edge
 {
     int to;
     int cost;
+
+    bool operator<(const Edge& rhs) const
+    {
+        return cost < rhs.cost;
+    }
+
+    bool operator>(const Edge& rhs) const
+    {
+        return cost > rhs.cost;
+    }
 };
+
+
 
 vec<int> dijkstra(const vec<vec<Edge>>& edges)
 {
@@ -28,31 +39,37 @@ vec<int> dijkstra(const vec<vec<Edge>>& edges)
     const int n = edges.size();
     vec<int> distances(n, inf);
     vec<bool> reached(n, false);
+    priority_queue<Edge, vector<Edge>, greater<Edge>> pqDist;
 
-    distances[0] = 0;
+    pqDist.push({0, 0});
 
     while (true)
     {
-        int minCost {inf};
-        int u {};
+        //始点からの最短点、コスト
+        Edge d {nil, inf};
 
-        for (int i = 0; i < n; ++i)
+        //一番近い点を探す
+        while (!pqDist.empty())
         {
-            if (!reached[i] && distances[i] < minCost)
+            auto e = pqDist.top();
+            pqDist.pop();
+
+            if (!reached[e.to])
             {
-                minCost = distances[i];
-                u = i;
+                d = e;
+                break;
             }
         }
 
-        if (minCost == inf)
+        if (d.cost == inf)
             break;
 
-        reached[u] = true;
+        reached[d.to] = true;
+        distances[d.to] = d.cost;
 
-        for (auto& e : edges[u])
+        for (auto& e : edges[d.to])
         {
-            distances[e.to] = min(distances[e.to], distances[u] + e.cost);
+            pqDist.push({e.to, d.cost + e.cost});
         }
     }
 
