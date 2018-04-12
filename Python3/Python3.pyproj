@@ -36,6 +36,9 @@
     <Compile Include="TechFUL\01_Beginner\07_graph2.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TechFUL\01_Beginner\08_findstring.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TechFUL\" />

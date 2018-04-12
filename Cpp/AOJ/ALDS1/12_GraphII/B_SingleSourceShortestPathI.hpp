@@ -21,12 +21,13 @@ struct Edge
     int cost;
 };
 
-int prim(const vec<vec<Edge>>& edges)
+vec<int> dijkstra(const vec<vec<Edge>>& edges)
 {
+    using namespace std;
+
     const int n = edges.size();
-    vec<bool> reached(n);
-    vec<int> parents(n, nil);
     vec<int> distances(n, inf);
+    vec<bool> reached(n, false);
 
     distances[0] = 0;
 
@@ -39,54 +40,23 @@ int prim(const vec<vec<Edge>>& edges)
         {
             if (!reached[i] && distances[i] < minCost)
             {
-                u = i;
                 minCost = distances[i];
+                u = i;
             }
         }
 
         if (minCost == inf)
             break;
-
+        
         reached[u] = true;
 
-        for (auto e : edges[u])
+        for (auto& e : edges[u])
         {
-            if (!reached[e.to])
-            {
-                if (e.cost < distances[e.to])
-                {
-                    distances[e.to] = e.cost;
-                    parents[e.to] = u;
-                }
-            }
+            distances[e.to] = min(distances[e.to], distances[u] + e.cost);
         }
     }
 
-    int sum = std::accumulate(distances.begin(), distances.end(), 0);
-
-    return sum;
-}
-
-vec<int> dijkstra(const vec<vec<Edge>>& edges)
-{
-    const int n = edges.size();
-    vec<int> distances(n, inf);
-    vec<bool> reached(n, false);
-    vec<int> parents(n, nil);
-    
-    reached[0] = true;
-    distances[0] = 0;
-
-    while (true)
-    {
-        int minCost {inf};
-        int u {};
-
-        for (int i = 0; i < n; ++i)
-        {
-            if(!reached[i])
-        }
-    }
+    return distances;
 }
 
 void solve()
@@ -97,16 +67,24 @@ void solve()
 
     //—×ÚƒŠƒXƒgŒ`Ž®
     vec<vec<Edge>> edges(n);
-
+    
+    //“ü—Í
     for (int i = 0; i < n; ++i)
     {
-        for (int j = 0, cost; j < n; ++j)
+        int v, k;
+        cin >> v >> k;
+        for (int j = 0; j < k; ++j)
         {
-            cin >> cost;
-            if (cost != -1)
-                edges[i].push_back({j, cost});
+            int to, cost;
+            cin >> to >> cost;
+            edges[i].push_back({to, cost});
         }
     }
 
-    cout << prim(edges) << endl;
+    auto d = dijkstra(edges);
+
+    for (int i = 0; i < n; ++i)
+    {
+        cout << i << " " << d[i] << endl;
+    }
 }
