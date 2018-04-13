@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6599c9bb-20fc-4cf9-8b93-f9cf13b2c57f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python3.py</StartupFile>
+    <StartupFile>TechFUL\01_Beginner\12_division2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -37,6 +37,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TechFUL\01_Beginner\08_findstring.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TechFUL\01_Beginner\09_reccursion.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TechFUL\01_Beginner\11_shopping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TechFUL\01_Beginner\12_division2.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
