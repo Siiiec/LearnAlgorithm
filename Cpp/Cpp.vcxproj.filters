@@ -28,6 +28,12 @@
     <Filter Include="ALDS1\12_GraphII">
       <UniqueIdentifier>{d58682da-20f5-4e44-9dbe-6d2b8420119b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DSL">
+      <UniqueIdentifier>{c0f254f9-7729-48be-967f-dbf562229854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DSL\1_Set">
+      <UniqueIdentifier>{d429d930-9118-4a2d-a8b0-ec9a29b266e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -101,6 +107,9 @@
     </ClInclude>
     <ClInclude Include="AOJ\ALDS1\12_GraphII\C_SingleSourceShortestPathII.hpp">
       <Filter>ALDS1\12_GraphII</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DSL\1_Set\A_DisjointSet.hpp">
+      <Filter>DSL\1_Set</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
