@@ -43,36 +43,28 @@ vec<int> dijkstra(const vec<vec<Edge>>& edges)
 
     pqDist.push({0, 0});
 
-    while (true)
+
+    while (!pqDist.empty())
     {
         //始点からの最短点、コスト
-        Edge d {nil, inf};
+        auto d = pqDist.top();
+        pqDist.pop();
 
-        //一番近い点を探す
-        while (!pqDist.empty())
-        {
-            auto e = pqDist.top();
-            pqDist.pop();
-
-            if (!reached[e.to])
-            {
-                d = e;
-                break;
-            }
-        }
-
-        if (d.cost == inf)
-            break;
+        //探索済みならスキップ
+        if (reached[d.to])
+            continue;
 
         reached[d.to] = true;
         distances[d.to] = d.cost;
 
         for (auto& e : edges[d.to])
         {
-            pqDist.push({e.to, d.cost + e.cost});
+            //未探査の候補を追加
+            if (!reached[e.to])
+                pqDist.push({e.to, d.cost + e.cost});
         }
     }
-
+    
     return distances;
 }
 
