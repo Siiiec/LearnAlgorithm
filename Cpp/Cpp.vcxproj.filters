@@ -108,8 +108,5 @@
     <ClInclude Include="AOJ\ALDS1\12_GraphII\C_SingleSourceShortestPathII.hpp">
       <Filter>ALDS1\12_GraphII</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\DSL\1_Set\A_DisjointSet.hpp">
-      <Filter>DSL\1_Set</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

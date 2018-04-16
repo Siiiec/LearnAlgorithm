@@ -150,7 +150,6 @@
     <ClInclude Include="AOJ\ALDS1\9_Heaps\A_CompleteBinaryTree.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\B_MaximumHeap.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\C_PriorityQueue.hpp" />
-    <ClInclude Include="AOJ\DSL\1_Set\A_DisjointSet.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
