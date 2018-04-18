@@ -163,6 +163,11 @@
     <ClInclude Include="TechFUL\01_Beginner\29_DivisionAndMod.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\30_CircleCollision.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\31_ReplaceString.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\01_ASCII.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\02_BubbleSort.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\03_RepotCard.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\04_Compute.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\05_Fibonacci.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

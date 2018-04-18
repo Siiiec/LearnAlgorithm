@@ -159,5 +159,20 @@
     <ClInclude Include="TechFUL\01_Beginner\31_ReplaceString.hpp">
       <Filter>TechFUL\01_Beginner</Filter>
     </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\01_ASCII.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\02_BubbleSort.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\03_RepotCard.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\04_Compute.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\05_Fibonacci.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
