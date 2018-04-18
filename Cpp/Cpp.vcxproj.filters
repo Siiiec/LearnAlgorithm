@@ -40,6 +40,12 @@
     <Filter Include="TechFUL\01_Beginner">
       <UniqueIdentifier>{b79ee2a3-0f06-4e12-83b0-e2dd2a4440fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TechFUL\02_Intermediate">
+      <UniqueIdentifier>{d2049911-954d-41a9-abc1-44701c08f0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TechFUL\03_Advanced">
+      <UniqueIdentifier>{4b846c17-8819-4bbe-9d8c-79d8c68eba32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
