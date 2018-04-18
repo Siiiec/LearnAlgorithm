@@ -34,6 +34,12 @@
     <Filter Include="DSL\1_Set">
       <UniqueIdentifier>{d429d930-9118-4a2d-a8b0-ec9a29b266e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TechFUL">
+      <UniqueIdentifier>{a8dd04fe-3d04-442f-94e1-3e119dca7629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TechFUL\01_Beginner">
+      <UniqueIdentifier>{b79ee2a3-0f06-4e12-83b0-e2dd2a4440fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -107,6 +113,45 @@
     </ClInclude>
     <ClInclude Include="AOJ\ALDS1\12_GraphII\C_SingleSourceShortestPathII.hpp">
       <Filter>ALDS1\12_GraphII</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\08_SerachString.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\21_TotalPrice.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\22_comparison.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\20_MultipleArithmetrics.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\23_sum.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\24_PrintSeason.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\25_EvenOdd.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\26_Hexadecimal.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\27_CountNumber.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\28_CountAlphabet.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\29_DivisionAndMod.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\30_CircleCollision.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\01_Beginner\31_ReplaceString.hpp">
+      <Filter>TechFUL\01_Beginner</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

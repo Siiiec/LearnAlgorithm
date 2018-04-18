@@ -150,6 +150,19 @@
     <ClInclude Include="AOJ\ALDS1\9_Heaps\A_CompleteBinaryTree.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\B_MaximumHeap.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\C_PriorityQueue.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\08_SerachString.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\20_MultipleArithmetrics.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\21_TotalPrice.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\22_comparison.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\23_sum.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\24_PrintSeason.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\25_EvenOdd.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\26_Hexadecimal.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\28_CountAlphabet.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\27_CountNumber.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\29_DivisionAndMod.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\30_CircleCollision.hpp" />
+    <ClInclude Include="TechFUL\01_Beginner\31_ReplaceString.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

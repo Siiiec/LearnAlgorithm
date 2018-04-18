@@ -1,3 +1,4 @@
+#! -*- encoding=utf-8 -*-
 price = int(input())
 number = int(input())
 
