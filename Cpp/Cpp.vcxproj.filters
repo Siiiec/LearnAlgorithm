@@ -46,6 +46,9 @@
     <Filter Include="TechFUL\03_Advanced">
       <UniqueIdentifier>{4b846c17-8819-4bbe-9d8c-79d8c68eba32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{5c85c595-97f4-4b13-83e7-3e6a8692bb48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -173,6 +176,15 @@
     </ClInclude>
     <ClInclude Include="TechFUL\02_Intermediate\05_Fibonacci.hpp">
       <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\TestThread.hpp">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\TestAsync.hpp">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\TestPackagedTask.hpp">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
