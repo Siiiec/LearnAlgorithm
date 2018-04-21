@@ -49,6 +49,9 @@
     <Filter Include="Thread">
       <UniqueIdentifier>{5c85c595-97f4-4b13-83e7-3e6a8692bb48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TechFUL\TechFUL_Hackathon_01">
+      <UniqueIdentifier>{71fe6f3b-705d-4138-bb44-b0ca6fa790c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -186,5 +189,30 @@
     <ClInclude Include="Thread\TestPackagedTask.hpp">
       <Filter>Thread</Filter>
     </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\02.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\03.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\04.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\05.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\01.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\06.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_01</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\06_Eratosthenes.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\07_stack.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="TEST_IO.hpp" />
   </ItemGroup>
 </Project>

@@ -172,6 +172,15 @@
     <ClInclude Include="TechFUL\02_Intermediate\03_RepotCard.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\04_Compute.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\05_Fibonacci.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\06_Eratosthenes.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\07_stack.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\01.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\02.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\03.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\04.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\05.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_01\06.hpp" />
+    <ClInclude Include="TEST_IO.hpp" />
     <ClInclude Include="Thread\TestAsync.hpp" />
     <ClInclude Include="Thread\TestPackagedTask.hpp" />
     <ClInclude Include="Thread\TestThread.hpp" />

@@ -1,17 +1,16 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "Thread\TestPackagedTask.hpp"
+#include "TechFUL\TechFUL_Hackathon_01\06.hpp"
 
 #include <chrono>
 #include <fstream>
 
-using namespace std::chrono;
-using namespace std;
-
 int main()
 {
+    using namespace std::chrono;
+    using namespace std;
+
     solve();
     return 0;
-
 }
