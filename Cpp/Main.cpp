@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "TechFUL\TechFUL_Hackathon_01\06.hpp"
+#include "AtCoder\ABC\095\D.hpp"
 
 #include <chrono>
 #include <fstream>
