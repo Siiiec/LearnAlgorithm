@@ -1,16 +1,36 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "TechFUL\TechFUL_Hackathon_01\06.hpp"
+#include "TechFUL\02_Intermediate\07_stack.hpp"
 
 #include <chrono>
 #include <fstream>
 
+namespace A
+{
+    void func() { std::cout << "A::func()" << std::endl; }
+    void hoge()
+    {
+        func();
+    }
+}
+
+namespace B
+{
+    namespace C //“ü‚êŽq‚É‚à‚Å‚«‚é
+    {
+        void func() { std::cout << "B::C::func()" << std::endl; }
+        void hoge()
+        {
+            A::hoge();
+        }
+    }
+}
+
 int main()
 {
-    using namespace std::chrono;
-    using namespace std;
-
-    solve();
-    return 0;
+    A::func();      //A::func()
+    B::C::func();   //B::C::func()
+    A::hoge();      //A::func()
+    B::C::hoge();   //A::func()
 }

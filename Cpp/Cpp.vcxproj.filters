@@ -214,5 +214,8 @@
       <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
     <ClInclude Include="TEST_IO.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
