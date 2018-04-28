@@ -61,6 +61,12 @@
     <Filter Include="AtCoder\ABC\095">
       <UniqueIdentifier>{0ba9a49b-3895-4971-9b70-4c30076edf26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder\AGC">
+      <UniqueIdentifier>{5a477bde-ef8f-47e6-89eb-1f33f3f045ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AtCoder\AGC\023">
+      <UniqueIdentifier>{9c3d79c3-103f-443a-9e73-d95d96f91cd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -223,5 +229,13 @@
       <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
     <ClInclude Include="TEST_IO.hpp" />
+    <ClInclude Include="AtCoder\ABC\095\A.hpp" />
+    <ClInclude Include="AtCoder\ABC\095\B.hpp" />
+    <ClInclude Include="AtCoder\ABC\095\C.hpp" />
+    <ClInclude Include="AtCoder\ABC\095\D.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp" />
+    <ClInclude Include="AtCoder\AGC\023\A.hpp">
+      <Filter>AtCoder\AGC\023</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

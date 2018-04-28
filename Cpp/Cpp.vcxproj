@@ -158,6 +158,7 @@
     <ClInclude Include="AtCoder\ABC\095\B.hpp" />
     <ClInclude Include="AtCoder\ABC\095\C.hpp" />
     <ClInclude Include="AtCoder\ABC\095\D.hpp" />
+    <ClInclude Include="AtCoder\AGC\023\A.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\08_SerachString.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\20_MultipleArithmetrics.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\21_TotalPrice.hpp" />
