@@ -229,13 +229,32 @@
       <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
     <ClInclude Include="TEST_IO.hpp" />
-    <ClInclude Include="AtCoder\ABC\095\A.hpp" />
-    <ClInclude Include="AtCoder\ABC\095\B.hpp" />
-    <ClInclude Include="AtCoder\ABC\095\C.hpp" />
-    <ClInclude Include="AtCoder\ABC\095\D.hpp" />
-    <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp" />
     <ClInclude Include="AtCoder\AGC\023\A.hpp">
       <Filter>AtCoder\AGC\023</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\AGC\023\B.hpp">
+      <Filter>AtCoder\AGC\023</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\AGC\023\C.hpp">
+      <Filter>AtCoder\AGC\023</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\AGC\023\D.hpp">
+      <Filter>AtCoder\AGC\023</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\095\A.hpp">
+      <Filter>AtCoder\ABC\095</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\095\B.hpp">
+      <Filter>AtCoder\ABC\095</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\095\C.hpp">
+      <Filter>AtCoder\ABC\095</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\095\D.hpp">
+      <Filter>AtCoder\ABC\095</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

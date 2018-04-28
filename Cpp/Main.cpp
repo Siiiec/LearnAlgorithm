@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "TechFUL\TechFUL_Hackathon_01\06.hpp"
+#include "AtCoder\AGC\023\A.hpp"
 
 #include <chrono>
 #include <fstream>
@@ -29,8 +29,6 @@ namespace B
 
 int main()
 {
-    A::func();      //A::func()
-    B::C::func();   //B::C::func()
-    A::hoge();      //A::func()
-    B::C::hoge();   //A::func()
+    solve();
+    return 0;
 }
