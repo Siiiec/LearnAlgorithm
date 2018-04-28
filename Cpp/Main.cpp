@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "TechFUL\02_Intermediate\07_stack.hpp"
+#include "TechFUL\TechFUL_Hackathon_01\06.hpp"
 
 #include <chrono>
 #include <fstream>

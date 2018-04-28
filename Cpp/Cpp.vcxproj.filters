@@ -52,6 +52,15 @@
     <Filter Include="TechFUL\TechFUL_Hackathon_01">
       <UniqueIdentifier>{71fe6f3b-705d-4138-bb44-b0ca6fa790c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder">
+      <UniqueIdentifier>{e8780b11-54d7-463b-846b-06870eb8739b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AtCoder\ABC">
+      <UniqueIdentifier>{1e7d2bf2-ec9b-4e65-8045-5dbd465a2864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AtCoder\ABC\095">
+      <UniqueIdentifier>{0ba9a49b-3895-4971-9b70-4c30076edf26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -214,8 +223,5 @@
       <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
     <ClInclude Include="TEST_IO.hpp" />
-    <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp">
-      <Filter>TechFUL\02_Intermediate</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
