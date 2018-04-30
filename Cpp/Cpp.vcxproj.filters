@@ -70,6 +70,9 @@
     <Filter Include="AOJ\GRL\01_ShortestPath">
       <UniqueIdentifier>{69f3e113-cd89-473a-b118-0938da3e18c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AOJ\GRL\04_Path_Cycle">
+      <UniqueIdentifier>{928a96e1-2d19-4f05-87ab-10764ab8f144}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -267,6 +270,12 @@
     </ClInclude>
     <ClInclude Include="AOJ\GRL\01_ShortestPath\A_SingleSourceShortestPath.hpp">
       <Filter>AOJ\GRL\01_ShortestPath</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\GRL\01_ShortestPath\B_SingleSourceShortestPath(NegativeEdges).hpp">
+      <Filter>AOJ\GRL\01_ShortestPath</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\GRL\04_Path_Cycle\B_TopologicalSort.hpp">
+      <Filter>AOJ\GRL\04_Path_Cycle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
