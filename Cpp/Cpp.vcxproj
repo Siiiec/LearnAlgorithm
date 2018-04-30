@@ -154,6 +154,8 @@
     <ClInclude Include="AOJ\ALDS1\9_Heaps\A_CompleteBinaryTree.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\B_MaximumHeap.hpp" />
     <ClInclude Include="AOJ\ALDS1\9_Heaps\C_PriorityQueue.hpp" />
+    <ClInclude Include="AOJ\GRL\01_ShortestPath\A_SingleSourceShortestPath.hpp" />
+    <ClInclude Include="AOJ\GRL\01_ShortestPath\C_AllPairsShortestPath.hpp" />
     <ClInclude Include="AtCoder\ABC\095\A.hpp" />
     <ClInclude Include="AtCoder\ABC\095\B.hpp" />
     <ClInclude Include="AtCoder\ABC\095\C.hpp" />
@@ -183,6 +185,7 @@
     <ClInclude Include="TechFUL\02_Intermediate\06_Eratosthenes.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\07_stack.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\09_Mean.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\01.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\02.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\03.hpp" />

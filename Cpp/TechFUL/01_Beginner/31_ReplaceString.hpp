@@ -13,9 +13,16 @@ void solve()
 
     for (int i = 0; i < source.size(); ++i)
     {
-        for (int j = 0; j < find.size(); ++j)
+        if (source.substr(i, find.size()) == find)
         {
-
+            out += replace;
+            i += find.size() - 1;
+        }
+        else
+        {
+            out += source[i];
         }
     }
+
+    cout << out << endl;
 }
