@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <functional>
-#include "AOJ\GRL\04_Path_Cycle\B_TopologicalSort.hpp"
+#include "TechFUL/02_Intermediate/16_AveragePoint.hpp"
 
 #include <chrono>
 #include <fstream>
