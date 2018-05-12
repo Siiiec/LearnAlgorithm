@@ -188,6 +188,7 @@
     <ClInclude Include="TechFUL\02_Intermediate\07_stack.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\08_FareTable.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\09_Mean.hpp" />
+    <ClInclude Include="TechFUL\02_Intermediate\14_Nim.hpp" />
     <ClInclude Include="TechFUL\02_Intermediate\16_AveragePoint.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\01.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\02.hpp" />

@@ -280,5 +280,8 @@
     <ClInclude Include="TechFUL\02_Intermediate\16_AveragePoint.hpp">
       <Filter>TechFUL\02_Intermediate</Filter>
     </ClInclude>
+    <ClInclude Include="TechFUL\02_Intermediate\14_Nim.hpp">
+      <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
