@@ -73,6 +73,12 @@
     <Filter Include="AOJ\GRL\04_Path_Cycle">
       <UniqueIdentifier>{928a96e1-2d19-4f05-87ab-10764ab8f144}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder\AtCoder Beginners Selection">
+      <UniqueIdentifier>{29ddec0a-a020-4ac1-bd69-ce41d9f7b066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DP">
+      <UniqueIdentifier>{d29a7140-2855-4d84-82a2-7b45b2cd526d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -282,6 +288,20 @@
     </ClInclude>
     <ClInclude Include="TechFUL\02_Intermediate\14_Nim.hpp">
       <Filter>TechFUL\02_Intermediate</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\01_PracticeA.hpp">
+      <Filter>AtCoder\AtCoder Beginners Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="Template.hpp" />
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\02_Product.hpp">
+      <Filter>AtCoder\AtCoder Beginners Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="tmp.hpp" />
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\09_DayDream.hpp">
+      <Filter>AtCoder\AtCoder Beginners Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="DP\QiitaDP.hpp">
+      <Filter>DP</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -166,6 +166,10 @@
     <ClInclude Include="AtCoder\AGC\023\B.hpp" />
     <ClInclude Include="AtCoder\AGC\023\C.hpp" />
     <ClInclude Include="AtCoder\AGC\023\D.hpp" />
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\01_PracticeA.hpp" />
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\02_Product.hpp" />
+    <ClInclude Include="AtCoder\AtCoder Beginners Selection\09_DayDream.hpp" />
+    <ClInclude Include="DP\QiitaDP.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\08_SerachString.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\20_MultipleArithmetrics.hpp" />
     <ClInclude Include="TechFUL\01_Beginner\21_TotalPrice.hpp" />
@@ -196,10 +200,12 @@
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\04.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\05.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\06.hpp" />
+    <ClInclude Include="Template.hpp" />
     <ClInclude Include="TEST_IO.hpp" />
     <ClInclude Include="Thread\TestAsync.hpp" />
     <ClInclude Include="Thread\TestPackagedTask.hpp" />
     <ClInclude Include="Thread\TestThread.hpp" />
+    <ClInclude Include="tmp.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
