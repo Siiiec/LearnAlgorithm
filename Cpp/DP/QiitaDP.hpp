@@ -89,7 +89,7 @@ void Q02_Knapsack()
     cout << dp[n][W] << endl;
 }
 
-void Q03_PartialSum()
+void Q03_PartialSumBool()
 {
     using namespace std;
 
@@ -99,24 +99,88 @@ void Q03_PartialSum()
     for (auto& x : v) cin >> x;
 
     //dp[i+1][j] : i番目までで値jを作れるか
-    vec<vec<bool>> dp(n+1, vec<bool>(A, false));
+    vec<vec<bool>> dp(n+1, vec<bool>(A + 1, false));
 
     //初期値の設定
     dp[0][0] = true;
 
+    //もらうDP
     for (int i = 0; i < n; ++i)
-        for (int j = 1; j < A; ++j)
+        for (int j = 0; j <= A; ++j)
         {
+            //
             dp[i + 1][j] = dp[i + 1][j] | dp[i][j];
-            if (v[i] <= j && dp[i][j - v[i] == 0) dp[i + 1][j] = true;
+            if (v[i] <= j)
+                dp[i + 1][j] = dp[i+1][j] | dp[i][j-v[i]];
+        }
+    
+    if (dp[n][A]) cout << "YES" << endl;
+    else cout << "NO" << endl;
+}
+
+void Q04_PartialSumCount()
+{
+    using namespace std;
+
+    constexpr int MOD = 1000000009;
+
+    int n, A;
+    cin >> n >> A;
+    vec<int> v(n);
+    for (auto& x : v) cin >> x;
+
+    //dp[i+1][j] : i番目までで値jを何個作れるか
+    vec<vec<int>> dp(n + 1, vec<int>(A + 1, 0));
+
+    //初期値
+    //要素数0で0を作れる
+    dp[0][0] = 1;
+
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j <= A; ++j)
+        {
+            (dp[i + 1][j] += dp[i][j]) %= MOD;
+            //選べるとき
+            if (j >= v[i]) (dp[i + 1][j] += dp[i][j - v[i]]) %= MOD;
         }
 
+    cout << dp[n][A] << endl;
+}
 
+void Q05_MinimalPartialSumCount()
+{
+    using namespace std;
+
+    //オーバーフロー防止のため、少し小さくする
+    constexpr int inf = 1 << 29;
+
+    int n, A;
+    cin >> n >> A;
+
+    vec<int> a(n);
+    for (auto& x : a) cin >> x;
+
+    //dp[i+1][j]    i番目の要素まででjを作れる最小個数
+    //作れない場合は-1
+    vec<vec<int>> dp(n + 1, vec<int>(A + 1, inf));
+
+    dp[0][0] = 0;
+
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j <= A; ++j)
+        {
+            dp[i + 1][j] = min(dp[i + 1][j] ,dp[i][j]);
+            if (j >= a[i])
+                dp[i + 1][j] = min(dp[i + 1][j], dp[i][j - a[i]] + 1);
+        }
+
+    if (dp[n][A] < inf) cout << dp[n][A] << endl;
+    else cout << -1 << endl;
 }
 
 void solve()
 {
-    Q03_PartialSum();
+    Q05_MinimalPartialSumCount();
 }
 
 //int main()
