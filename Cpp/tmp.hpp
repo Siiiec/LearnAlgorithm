@@ -30,30 +30,42 @@ constexpr double nil_d = nil<double>;
 template <class T>
 using vec = std::vector<T>;
 
-template <class T>
-struct Vec2D
-{
-    T x, y;
-};
-
 void solve()
 {
     using namespace std;
-    int n, l;
-    cin >> n >> l;
-    vector<string> v(n);
-    for (auto& s : v) cin >> s;
+    ll N, M;
+    cin >> N >> M;
 
-    sort<>(v.begin(), v.end(), 
-        [](string lhs, string rhs)
-    {
-        return lhs.compare(rhs) < 0;
-    });
+    vec<int> P(N);
 
-    for (auto s : v)
-        cout << s;
-    cout << endl;
+    for (auto& p : P) cin >> p;
 
+    ll maxPoint {};
+
+    sort(P.begin(), P.end());
+
+    //4重ループの場合 1000^4=10^12
+    for (int i = 0; i < N; ++i)
+        for (int j = 0; j < N; ++j)
+            for (int k = 0; k < N; ++k)
+                for (int l = 0; l < N; ++l)
+                {
+                    ll sum = P[i] + P[j] + P[k] + P[l];
+                    if (sum <= M)
+                    {
+                        maxPoint = max(maxPoint, sum);
+                    } 
+                }
+
+    //3重ループ 1000^3=10^9
+    for (int i = 0; i < N; ++i)
+        for (int j = 0; j < N; ++j)
+            for (int k = 0; k < N; ++k)
+            {
+                
+            }
+
+    cout << maxPoint << endl;
 }
 
 //int main()
