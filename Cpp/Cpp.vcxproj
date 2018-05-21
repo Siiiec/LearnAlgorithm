@@ -158,6 +158,7 @@
     <ClInclude Include="AOJ\DPL\01_Combinatorial\B_01_Knapsack.hpp" />
     <ClInclude Include="AOJ\DPL\01_Combinatorial\C_Knapsack.hpp" />
     <ClInclude Include="AOJ\DPL\01_Combinatorial\D_LongestIncreaseSubsequence.hpp" />
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\E_Edit Distance(LevenshteinDistance).hpp" />
     <ClInclude Include="AOJ\GRL\01_ShortestPath\A_SingleSourceShortestPath.hpp" />
     <ClInclude Include="AOJ\GRL\01_ShortestPath\B_SingleSourceShortestPath(NegativeEdges).hpp" />
     <ClInclude Include="AOJ\GRL\01_ShortestPath\C_AllPairsShortestPath.hpp" />

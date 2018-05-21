@@ -321,5 +321,8 @@
     <ClInclude Include="AOJ\DPL\01_Combinatorial\D_LongestIncreaseSubsequence.hpp">
       <Filter>AOJ\DPL\01_Combinatiorial</Filter>
     </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\E_Edit Distance(LevenshteinDistance).hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -33,14 +33,14 @@ using vec = std::vector<T>;
 void solve()
 {
     using namespace std;
-    
+
     constexpr int inf = 1 << 30;
 
     string str1, str2;
     string s;
     cin >> s; str1 = "-" + s;
     cin >> s; str2 = "-" + s;
-    
+
     vec<vec<int>> dp(str1.size(), vec<int>(str2.size(), inf));
 
     //‰Šú‰»
