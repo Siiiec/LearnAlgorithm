@@ -79,6 +79,12 @@
     <Filter Include="DP">
       <UniqueIdentifier>{d29a7140-2855-4d84-82a2-7b45b2cd526d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AOJ\DPL">
+      <UniqueIdentifier>{8d6163ee-92dc-46e8-a1a5-5da366199bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AOJ\DPL\01_Combinatiorial">
+      <UniqueIdentifier>{d84fd3a9-7f0f-40c9-a3c0-e1eaa42b5991}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -302,6 +308,18 @@
     </ClInclude>
     <ClInclude Include="DP\QiitaDP.hpp">
       <Filter>DP</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\A_CoinChargingProblem.hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\B_01_Knapsack.hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\C_Knapsack.hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\D_LongestIncreaseSubsequence.hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

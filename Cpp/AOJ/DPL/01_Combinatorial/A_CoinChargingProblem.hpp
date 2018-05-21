@@ -30,38 +30,27 @@ constexpr double nil_d = nil<double>;
 template <class T>
 using vec = std::vector<T>;
 
-struct Item
-{
-    int weight, value;
-};
-
 void solve()
 {
     using namespace std;
 
     constexpr int inf = 1 << 29;
 
-    int n;
-    cin >> n;
-    vec<int> a(n, 0);
-    for (auto& x : a) cin >> x;
-    
-    ////この方法ではO(n^2)
-    ////dp[i + 1]  a[i]を最終要素とした増加部分列の長さ
-    //vec<int> dp(n + 1, 1);
+    int n, m;   //n:払う金額, m:コインの種類
+    cin >> n >> m;
+    vec<int> c(m);
+    for (auto& x : c) cin >> x;
 
-    //for (int i = 0; i < n; ++i)
-    //    for (int j = 0; j < i; ++j)
-    //        if (a[j] < a[i])
-    //            dp[i + 1] = max(dp[i + 1], dp[j] + 1);
+    vec<int> dp(n + 1, inf);    //m円払うときの最小枚数
 
-    //dp[i]  長さがi + 1となる増加部分列の最終要素の最小値
-    vec<int> dp(n, inf);
+    dp[0] = 0;
 
-    for (int i = 0; i < n; ++i)
-        *lower_bound(dp.begin(), dp.end(), a[i]) = a[i];
+    for (int i = 1; i <= n; ++i)
+        for (int j = 0; j < m; ++j)
+            if (i >= c[j])
+                dp[i] = min(dp[i], dp[i - c[j]] + 1);
 
-    cout << distance(dp.begin(), lower_bound(dp.begin(), dp.end(), inf)) << endl;
+    cout << dp[n] << endl;
 }
 
 //int main()

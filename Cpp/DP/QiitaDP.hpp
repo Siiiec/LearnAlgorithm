@@ -178,6 +178,21 @@ void Q05_MinimalPartialSumCount()
     else cout << -1 << endl;
 }
 
+void Q06_PartialSum_K()
+{
+    using namespace std;
+
+    int n, K, A;
+    cin >> n >> K >> A;
+
+    //dp[i +1][j][k]    
+    //i”Ô–Ú‚Ü‚Å‚Ì®”‚Ì’†‚©‚çk‚±‚Ì®”‚ğ‘I‚ñ‚Å‘«‚µ‚½‘˜a‚ğj‚Æ‚Å‚«‚é‚©
+    vec<vec<vec<int>>> a(n + 1, vec<vec<int>>(A + 1, vec<int>(K + 1, -1)));
+
+
+
+}
+
 void solve()
 {
     Q05_MinimalPartialSumCount();

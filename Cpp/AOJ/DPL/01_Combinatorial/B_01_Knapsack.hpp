@@ -41,27 +41,24 @@ void solve()
 
     constexpr int inf = 1 << 29;
 
-    int n;
-    cin >> n;
-    vec<int> a(n, 0);
-    for (auto& x : a) cin >> x;
-    
-    ////この方法ではO(n^2)
-    ////dp[i + 1]  a[i]を最終要素とした増加部分列の長さ
-    //vec<int> dp(n + 1, 1);
+    int N, W;
+    cin >> N >> W;
 
-    //for (int i = 0; i < n; ++i)
-    //    for (int j = 0; j < i; ++j)
-    //        if (a[j] < a[i])
-    //            dp[i + 1] = max(dp[i + 1], dp[j] + 1);
+    vec<Item> items(N);
+    for (auto& i : items) cin >> i.value >> i.weight;
 
-    //dp[i]  長さがi + 1となる増加部分列の最終要素の最小値
-    vec<int> dp(n, inf);
+    //dp[i + 1][w] i番目の品物までで、重さw以下のときの価値の最大値
+    vec<vec<int>> dp(N + 1, vec<int>(W + 1, 0));
 
-    for (int i = 0; i < n; ++i)
-        *lower_bound(dp.begin(), dp.end(), a[i]) = a[i];
+    for (int i = 0; i < N; ++i)
+        for (int w = 0; w <= W; ++w)
+        {
+            dp[i + 1][w] = dp[i][w];
+            if (items[i].weight <= w)
+                dp[i + 1][w] = max(dp[i + 1][w], dp[i][w - items[i].weight] + items[i].value);
+        }
 
-    cout << distance(dp.begin(), lower_bound(dp.begin(), dp.end(), inf)) << endl;
+    cout << dp[N][W] << endl;
 }
 
 //int main()
