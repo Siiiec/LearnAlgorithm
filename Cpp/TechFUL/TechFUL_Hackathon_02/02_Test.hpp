@@ -22,27 +22,25 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-
-
 void solve()
 {
     using namespace std;
 
+    int n; cin >> n;
 
-    using bit = bitset<4>;
+    vector<int> p(n - 1);
+    for (auto& x : p) cin >> x;
 
-    int C;
-    string s;
-    cin >> C >> s;
+    double pa;
+    cin >> pa;
 
-    int lhs {};
-    for (int i = 0; i < C; ++i)
-        lhs += 9 * pow(10, i);
+    int sum = accumulate(p.cbegin(), p.cend(), 0);
 
-    for (int i = 0; i < C; ++i)
-    {
-        bit b(s.substr(i, i + 4));
-    }
+    double allSum = pa * n;
+
+    int point = static_cast<int>(allSum - sum);
+
+    cout << point << endl;
 
 }
 

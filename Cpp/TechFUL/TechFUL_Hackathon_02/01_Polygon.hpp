@@ -22,29 +22,23 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-
-
-void solve()
+struct Item
 {
-    using namespace std;
+    int weight, value;
+};
 
-
-    using bit = bitset<4>;
-
-    int C;
-    string s;
-    cin >> C >> s;
-
-    int lhs {};
-    for (int i = 0; i < C; ++i)
-        lhs += 9 * pow(10, i);
-
-    for (int i = 0; i < C; ++i)
-    {
-        bit b(s.substr(i, i + 4));
-    }
-
-}
+//void solve()
+//{
+//    using namespace std;
+//
+//    int n1, n2;
+//    cin >> n1 >> n2;
+//
+//    double angle = 180.0 * (n1 - 2) / n1;
+//
+//    cout << fixed << setprecision(n2) << angle << endl;
+//
+//}
 
 //int main()
 //{

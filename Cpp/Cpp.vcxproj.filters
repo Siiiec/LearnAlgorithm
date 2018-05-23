@@ -2,6 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TechFUL\TechFUL_Hackathon_02\01_Polygon.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TechFUL">
@@ -84,6 +87,9 @@
     </Filter>
     <Filter Include="AOJ\DPL\01_Combinatiorial">
       <UniqueIdentifier>{d84fd3a9-7f0f-40c9-a3c0-e1eaa42b5991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TechFUL\TechFUL_Hackathon_02">
+      <UniqueIdentifier>{e092f210-7903-4e29-a4e9-234f2e57e3ef}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +326,33 @@
     </ClInclude>
     <ClInclude Include="AOJ\DPL\01_Combinatorial\D_LongestIncreaseSubsequence.hpp">
       <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\02_Test.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\03_HowManyAnimals.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\04_SubNine.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\05_DrawShape.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\06_Baisuu.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\07_Kuji.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\08_Maze.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\09_StringPattern.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\10_Matching.hpp">
+      <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

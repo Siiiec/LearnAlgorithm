@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TechFUL\TechFUL_Hackathon_02\01_Polygon.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\A_DP_Fibonacci.hpp" />
@@ -204,6 +205,15 @@
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\04.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\05.hpp" />
     <ClInclude Include="TechFUL\TechFUL_Hackathon_01\06.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\02_Test.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\03_HowManyAnimals.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\04_SubNine.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\05_DrawShape.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\06_Baisuu.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\07_Kuji.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\08_Maze.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\09_StringPattern.hpp" />
+    <ClInclude Include="TechFUL\TechFUL_Hackathon_02\10_Matching.hpp" />
     <ClInclude Include="Template.hpp" />
     <ClInclude Include="TEST_IO.hpp" />
     <ClInclude Include="Thread\TestAsync.hpp" />

@@ -22,28 +22,20 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-
-
 void solve()
 {
     using namespace std;
 
+    int n, m, f, u;
+    cin >> n >> m >> f >> u;
 
-    using bit = bitset<4>;
-
-    int C;
-    string s;
-    cin >> C >> s;
-
-    int lhs {};
-    for (int i = 0; i < C; ++i)
-        lhs += 9 * pow(10, i);
-
-    for (int i = 0; i < C; ++i)
-    {
-        bit b(s.substr(i, i + 4));
-    }
-
+    for (int i = 0; i <= m; ++i)
+        for (int j = 0; j <= m; ++j)
+            if (i * f + j * u == n && i + j == m)
+            {
+                cout << i << endl << j << endl;
+                break;
+            }
 }
 
 //int main()
