@@ -30,39 +30,30 @@ constexpr double nil_d = nil<double>;
 template <class T>
 using vec = std::vector<T>;
 
-struct Item
-{
-    int weight, value;
-};
-
 void solve()
 {
     using namespace std;
 
     constexpr int inf = 1 << 30;
 
-    int n;
-    cin >> n;
-    vec<int> a(n, 0);
-    for (auto& x : a) cin >> x;
+    string str1, str2;
+    string s;
+    cin >> s; str1 = "-" + s;
+    cin >> s; str2 = "-" + s;
 
-    ////この方法ではO(n^2)
-    ////dp[i + 1]  a[i]を最終要素とした増加部分列の長さ
-    //vec<int> dp(n + 1, 1);
+    vec<vec<int>> dp(str1.size(), vec<int>(str2.size(), inf));
 
-    //for (int i = 0; i < n; ++i)
-    //    for (int j = 0; j < i; ++j)
-    //        if (a[j] < a[i])
-    //            dp[i + 1] = max(dp[i + 1], dp[j] + 1);
+    //初期化
+    for (int i = 0; i < str1.size(); ++i) dp[i][0] = i;
+    for (int i = 0; i < str2.size(); ++i) dp[0][i] = i;
 
+    for (int i = 1; i < str1.size(); ++i)
+        for (int j = 1; j < str2.size(); ++j)
+        {
+            dp[i][j] = min(min(dp[i - 1][j] + 1, dp[i][j - 1] + 1), dp[i - 1][j - 1] + (str1[i] == str2[j] ? 0 : 1));
+        }
 
-    //dp[i]  長さがi + 1となる増加部分列の最終要素の最小値
-    vec<int> dp(n, inf);
-
-    for (int i = 0; i < n; ++i)
-        *lower_bound(dp.begin(), dp.end(), a[i]) = a[i];
-
-    cout << distance(dp.begin(), lower_bound(dp.begin(), dp.end(), inf)) << endl;
+    cout << dp[str1.size() - 1][str2.size() - 1] << endl;
 }
 
 //int main()

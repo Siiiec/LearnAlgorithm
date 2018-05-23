@@ -22,28 +22,35 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-
+struct Item
+{
+    int weight, value;
+};
 
 void solve()
 {
     using namespace std;
 
+    constexpr int inf = 1 << 29;
 
-    using bit = bitset<4>;
-
-    int C;
+    string str1, str2;
     string s;
-    cin >> C >> s;
+    cin >> s; str1 = "-" + s;
+    cin >> s; str2 = "-" + s;
+    
+    vec<vec<int>> dp(str1.size(), vec<int>(str2.size(), inf));
 
-    int lhs {};
-    for (int i = 0; i < C; ++i)
-        lhs += 9 * pow(10, i);
+    //‰Šú‰»
+    for (int i = 0; i < str1.size(); ++i) dp[i][0] = i;
+    for (int i = 0; i < str2.size(); ++i) dp[0][i] = i;
 
-    for (int i = 0; i < C; ++i)
-    {
-        bit b(s.substr(i, i + 4));
-    }
+    for (int i = 1; i < str1.size(); ++i)
+        for (int j = 1; j < str2.size(); ++j)
+        {
+            dp[i][j] = min(min(dp[i - 1][j] + 1, dp[i][j - 1] + 1), dp[i - 1][j - 1] + (str1[i] == str2[j] ? 0 : 1));
+        }
 
+    cout << dp[str1.size() - 1][str2.size() - 1] << endl;
 }
 
 //int main()
