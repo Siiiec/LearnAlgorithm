@@ -22,35 +22,93 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-struct Item
-{
-    int weight, value;
-};
-
 void solve()
 {
     using namespace std;
+    int n;
+    cin >> n;
 
-    constexpr int inf = 1 << 29;
+    constexpr int female = 0;
+    constexpr int male = 1;
 
-    string str1, str2;
-    string s;
-    cin >> s; str1 = "-" + s;
-    cin >> s; str2 = "-" + s;
-    
-    vec<vec<int>> dp(str1.size(), vec<int>(str2.size(), inf));
+    constexpr int notMatched = -1;
+    constexpr int matched = 10;
 
-    //‰Šú‰»
-    for (int i = 0; i < str1.size(); ++i) dp[i][0] = i;
-    for (int i = 0; i < str2.size(); ++i) dp[0][i] = i;
+    vec<vec<int>> match(2, vec<int>(n, notMatched));
 
-    for (int i = 1; i < str1.size(); ++i)
-        for (int j = 1; j < str2.size(); ++j)
+    vec<vec<int>> frank(n);
+    vec<vec<int>> mrank(n);
+    vec<int> ans(n);
+
+    //“ü—Í(—«)
+    for (auto& v : frank)
+    {
+        for (int i = 0; i < n; ++i)
         {
-            dp[i][j] = min(min(dp[i - 1][j] + 1, dp[i][j - 1] + 1), dp[i - 1][j - 1] + (str1[i] == str2[j] ? 0 : 1));
+            int in;
+            cin >> in;
+            v.push_back(in - 1);
+        }
+    }
+    //“ü—Í(’j«)
+    for (auto& v : mrank)
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            int in;
+            cin >> in;
+            v.push_back(in - 1);
+        }
+    }
+
+    for (int i = 0; i < n; ++i)
+    {
+        set<string> se;
+        //FtoM
+        for (int f = 0; f < n; ++f)
+        {
+            if (match[female][f] == matched)
+                continue;
+            for (int j = 0; j < n; ++j)
+            {
+                int m = frank[f][j];
+                if (match[male][m] != matched)
+                {
+                    se.emplace(to_string(f) + to_string(m));
+                    break;
+                }
+            }
         }
 
-    cout << dp[str1.size() - 1][str2.size() - 1] << endl;
+        //MtoF
+        for (int m = 0; m < n; ++m)
+        {
+            if (match[male][m] == matched)
+                continue;
+            for (int j = 0; j < n; ++j)
+            {
+                int f = mrank[m][j];
+                if (match[female][f] != matched)
+                {
+                    auto matchStr = to_string(f) + to_string(m);
+                    if (se.count(matchStr) != 0)
+                    {
+                        match[male][m] = matched;
+                        match[female][f] = matched;
+                        ans[f] = m + 1;
+                        break;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+
+    for (auto m : ans)
+        cout << m << endl;
 }
 
 //int main()
