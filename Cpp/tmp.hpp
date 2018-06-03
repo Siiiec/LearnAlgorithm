@@ -26,20 +26,22 @@ using vec = std::vector<T>;
 void solve()
 {
     using namespace std;
-    using bit = bitset<9>;
+    
+    int N, M;
+    cin >> N >> M;
 
-    constexpr int pow9 = 512;
-
-    string s;
-    cin >> s;
-
-    vec<int> v(pow9);
-    for (int i = 0; i < pow9; ++i)
+    vec<int> roadNum(N);
+    
+    for (int i = 0; i < M; ++i)
     {
-        
-        
-        
+        int a, b;
+        cin >> a >> b;
+        ++roadNum[a - 1];
+        ++roadNum[b - 1];
     }
+
+    for (auto r : roadNum)
+        cout << r << endl;
 }
 
 //int main()

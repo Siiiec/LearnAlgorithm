@@ -357,12 +357,17 @@
     <ClInclude Include="TechFUL\TechFUL_Hackathon_02\10_Matching.hpp">
       <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
     </ClInclude>
-    <ClInclude Include="AOJ\DPL\01_Combinatorial\E_Edit Distance(LevenshteinDistance).hpp" />
     <ClInclude Include="Ant_Book\1_6_kujibiki.hpp">
       <Filter>Ant_Book</Filter>
     </ClInclude>
     <ClInclude Include="Ant_Book\2_1_PartialSum.hpp">
       <Filter>Ant_Book</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\E_Edit Distance(LevenshteinDistance).hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\F_01Knapsack_II.hpp">
+      <Filter>AOJ\DPL\01_Combinatiorial</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
