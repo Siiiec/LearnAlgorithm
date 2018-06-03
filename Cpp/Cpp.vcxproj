@@ -131,6 +131,8 @@
     <ClCompile Include="TechFUL\TechFUL_Hackathon_02\01_Polygon.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ant_Book\1_6_kujibiki.hpp" />
+    <ClInclude Include="Ant_Book\2_1_PartialSum.hpp" />
     <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\A_DP_Fibonacci.hpp" />
     <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\B_DP_Matrix.hpp" />
     <ClInclude Include="AOJ\ALDS1\10_DynamicProgramming\C_DP_LCS.hpp" />

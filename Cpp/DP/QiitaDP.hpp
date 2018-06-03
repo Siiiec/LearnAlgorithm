@@ -184,18 +184,57 @@ void Q06_PartialSum_K()
 
     int n, K, A;
     cin >> n >> K >> A;
+    vec<int> a(n);
+    for (auto& x : a) 
+        cin >> x;
 
     //dp[i +1][j][k]    
-    //i番目までの整数の中からkこの整数を選んで足した総和をjとできるか
-    vec<vec<vec<int>>> a(n + 1, vec<vec<int>>(A + 1, vec<int>(K + 1, -1)));
+    //i番目までの整数の中からkこの整数を選んで足した総和をjとできるかどうか
+    vec<vec<vec<int>>> dp(n + 1, vec<vec<int>>(A + 1, vec<int>(K + 1, 0)));
+    
 
+    //初期条件
+    for (int i = 0; i <= n; ++i)
+        dp[i][0][0] = 1;
+
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j <= A; ++j)
+            for (int k = 1; k < K; ++k)
+            {
+                dp[i + 1][j][k] = max(dp[i][j][k], dp[i + 1][j][k]);
+                if (j - a[i] >= 0)
+                    dp[i + 1][j][k] = max(dp[i + 1][j][k], dp[i][j - a[i]][k] + 1);
+                
+            }
+
+    if (dp[n][A][K] >= 1)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+
+
+    for (auto i : dp)
+    {
+        cout << "i: " << endl;
+        for (auto j : i)
+        {
+            cout << " j: ";
+            for (auto k : j)
+                cout << k;
+        }
+        cout << endl;
+    }
+
+    //上の方法ではO(nKA)となり制約が緩いときのみ使用可能
+    //
+    
 
 
 }
 
 void solve()
 {
-    Q05_MinimalPartialSumCount();
+    Q06_PartialSum_K();
 }
 
 //int main()

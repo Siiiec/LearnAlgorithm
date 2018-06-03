@@ -91,6 +91,9 @@
     <Filter Include="TechFUL\TechFUL_Hackathon_02">
       <UniqueIdentifier>{e092f210-7903-4e29-a4e9-234f2e57e3ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ant_Book">
+      <UniqueIdentifier>{4aa6b99e-d1f4-4dea-a2aa-72723f9c9333}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -353,6 +356,13 @@
     </ClInclude>
     <ClInclude Include="TechFUL\TechFUL_Hackathon_02\10_Matching.hpp">
       <Filter>TechFUL\TechFUL_Hackathon_02</Filter>
+    </ClInclude>
+    <ClInclude Include="AOJ\DPL\01_Combinatorial\E_Edit Distance(LevenshteinDistance).hpp" />
+    <ClInclude Include="Ant_Book\1_6_kujibiki.hpp">
+      <Filter>Ant_Book</Filter>
+    </ClInclude>
+    <ClInclude Include="Ant_Book\2_1_PartialSum.hpp">
+      <Filter>Ant_Book</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
