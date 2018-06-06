@@ -26,22 +26,11 @@ using vec = std::vector<T>;
 void solve()
 {
     using namespace std;
-    
-    int N, M;
-    cin >> N >> M;
+    ll X;
+    cin >> X;
+    double n = ceil(0.5 * (-1 + sqrt(1 + 8 * X)));
+    cout << (ll)(n) << endl;
 
-    vec<int> roadNum(N);
-    
-    for (int i = 0; i < M; ++i)
-    {
-        int a, b;
-        cin >> a >> b;
-        ++roadNum[a - 1];
-        ++roadNum[b - 1];
-    }
-
-    for (auto r : roadNum)
-        cout << r << endl;
 }
 
 //int main()
