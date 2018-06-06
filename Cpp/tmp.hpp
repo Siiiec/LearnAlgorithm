@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <array>
 #include <algorithm>
@@ -26,14 +27,21 @@ void solve()
 {
     using namespace std;
     
-    string str;
-    cin >> str;
+    int N, M;
+    cin >> N >> M;
 
-    for (int i = 1; i < str.size() - 1; ++i)
+    vec<int> roadNum(N);
+    
+    for (int i = 0; i < M; ++i)
     {
-
+        int a, b;
+        cin >> a >> b;
+        ++roadNum[a - 1];
+        ++roadNum[b - 1];
     }
 
+    for (auto r : roadNum)
+        cout << r << endl;
 }
 
 //int main()
