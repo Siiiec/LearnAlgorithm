@@ -47,38 +47,45 @@ using vec = std::vector<T>;
 void solve()
 {
     using namespace std;
-    
-    //int N;
-    //cin >> N;
 
-    //vec<int> p(N);
-    //for (auto& x : p)
-    //    cin >> x;
+    int N;
+    cin >> N;
 
-    //// dp[i + 1][j] i”Ô–Ú‚Ü‚Å‚Åj“_‚ğì‚é‚±‚Æ‚ª‚Å‚«‚éŒÂ”
-    //vec<vec<int>> dp(p.size() + 1,vec<int>( N + 1, 0));
-    //for (int i = 0; i <= p.size(); ++i)
-    //    dp[i][0] = 1;
+    vec<int> v;
+    v.push_back(1);
 
-    //for (int i = 0; i < p.size(); ++i)
-    //{
+    for (int i = 6; i <= N; i *= 6)
+    {
+        v.push_back(i);
+    }
 
-    //}
+    for (int i = 9; i <= N; i *= 9)
+    {
+        v.push_back(i);
+    }
 
-    //vec<bool> dp(10000 + 1, false);
-    //dp[0] = true;
+    sort(v.begin(), v.end());
 
-    //int maximum = accumulate(p.cbegin(), p.cend(), 0);
+    vec<vec<int>> dp(v.size() + 1, vec<int>(N + 1, 10000000));
 
-    //for (int i = 1; i <= maximum; ++i)
-    //{
-    //    for (int j = 0; j < p.size(); ++j)
-    //        if (i >= p[j])
-    //            dp[i] = dp[i] | dp[i - p[j]];
-    //}
+    for (int i = 0; i < dp.size(); ++i)
+        dp[i][0] = 0;
 
-    //cout << count(dp.cbegin(), dp.cend(), true) << endl;
+    for (int j = 0; j <= N; ++j)
+        dp[0][j] = j;
 
+    for (int i = 1; i <= v.size(); ++i)
+        for (int j = 0; j <= N; ++j)
+        {
+            dp[i][j] = min(dp[i - 1][j], dp[i][j]);
+
+
+            for (int k = 0; k < i; ++k)
+                if (j >= v[k])
+                    dp[i][j] = min({dp[i][j], dp[i - 1][j - v[k]] + 1, dp[i][j - v[k]] + 1});
+        }
+
+    cout << dp[v.size()][N] << endl;
 }
 
 //int main()

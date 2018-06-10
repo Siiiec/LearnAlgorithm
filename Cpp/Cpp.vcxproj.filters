@@ -97,6 +97,9 @@
     <Filter Include="AtCoder\ABC\065">
       <UniqueIdentifier>{2ad5ea2b-6ea8-4deb-9127-bbe36293150d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder\ABC\099">
+      <UniqueIdentifier>{2d28941e-084e-4131-93b6-85d2c07e59de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -374,6 +377,9 @@
     </ClInclude>
     <ClInclude Include="AtCoder\ABC\060\D.hpp">
       <Filter>AtCoder\ABC\065</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\099\C.hpp">
+      <Filter>AtCoder\ABC\099</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
