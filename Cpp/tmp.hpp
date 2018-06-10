@@ -19,8 +19,8 @@
 #include <random>
 
 // boost
-#define USE_BOOST_ON_CODE
-#ifdef USE_BOOST_ON_CODE
+#define USE_BOOST_IN_CODE
+#ifdef USE_BOOST_IN_CODE
 #include <boost\range.hpp>
 #include <boost\range\algorithm.hpp>
 #include <boost\range\numeric.hpp>
