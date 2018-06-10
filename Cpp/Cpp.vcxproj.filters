@@ -94,6 +94,9 @@
     <Filter Include="Ant_Book">
       <UniqueIdentifier>{4aa6b99e-d1f4-4dea-a2aa-72723f9c9333}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder\ABC\065">
+      <UniqueIdentifier>{2ad5ea2b-6ea8-4deb-9127-bbe36293150d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -368,6 +371,9 @@
     </ClInclude>
     <ClInclude Include="AOJ\DPL\01_Combinatorial\F_01Knapsack_II.hpp">
       <Filter>AOJ\DPL\01_Combinatiorial</Filter>
+    </ClInclude>
+    <ClInclude Include="AtCoder\ABC\060\D.hpp">
+      <Filter>AtCoder\ABC\065</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

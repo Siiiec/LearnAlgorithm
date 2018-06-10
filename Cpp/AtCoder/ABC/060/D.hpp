@@ -24,26 +24,6 @@ using ll = long long;
 template <class T>
 using vec = std::vector<T>;
 
-//namespace std
-//{
-//    template<>
-//    class hash<Key>
-//    {
-//    public:
-//        size_t operator() (const Key& key) const
-//        {
-//            size_t seed = 0;
-//            auto i_hash = hash<int>()(key.i_th);
-//            auto w_hash = hash<int>()(key.W);
-//
-//            seed ^= i_hash + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-//            seed ^= w_hash + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-//
-//            return seed;
-//        }
-//    };
-//}
-
 struct Item
 {
     int value;
@@ -128,7 +108,7 @@ private:
         currentDp = solve(i - 1, j);
         if (j >= items[i].weight)
             currentDp = std::max(currentDp, solve(i - 1, j - items[i].weight) + items[i].value);
-        
+
         return currentDp;
     }
 
