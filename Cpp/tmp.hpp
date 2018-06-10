@@ -18,6 +18,18 @@
 #include <cmath>
 #include <random>
 
+// boost
+#define USE_BOOST_ON_CODE
+#ifdef USE_BOOST_ON_CODE
+#include <boost\range.hpp>
+#include <boost\range\algorithm.hpp>
+#include <boost\range\numeric.hpp>
+#include <boost\range\irange.hpp>
+#include <boost\range\adaptor\strided.hpp>
+#include <boost\range\adaptor\transformed.hpp>
+#endif
+
+
 using ll = long long;
 
 //vector
@@ -47,37 +59,20 @@ using vec = std::vector<T>;
 void solve()
 {
     using namespace std;
-    
-    //int N;
-    //cin >> N;
 
-    //vec<int> p(N);
-    //for (auto& x : p)
-    //    cin >> x;
+    vec<int> v {1, 2, 4, 5 ,6, 43, 4, 34, 1, 4, 7};
 
-    //// dp[i + 1][j] iî‘ñ⁄Ç‹Ç≈Ç≈jì_ÇçÏÇÈÇ±Ç∆Ç™Ç≈Ç´ÇÈå¬êî
-    //vec<vec<int>> dp(p.size() + 1,vec<int>( N + 1, 0));
-    //for (int i = 0; i <= p.size(); ++i)
-    //    dp[i][0] = 1;
+    boost::sort(v);
 
-    //for (int i = 0; i < p.size(); ++i)
-    //{
+    auto iter = boost::sub_range<vec<int>>(begin(v) + 2, begin(v) + 5);
 
-    //}
+    boost::copy(iter, std::ostream_iterator<int>(std::cout, "\n"));
 
-    //vec<bool> dp(10000 + 1, false);
-    //dp[0] = true;
-
-    //int maximum = accumulate(p.cbegin(), p.cend(), 0);
-
-    //for (int i = 1; i <= maximum; ++i)
-    //{
-    //    for (int j = 0; j < p.size(); ++j)
-    //        if (i >= p[j])
-    //            dp[i] = dp[i] | dp[i - p[j]];
-    //}
-
-    //cout << count(dp.cbegin(), dp.cend(), true) << endl;
+    boost::copy(
+        boost::irange(0, 100)
+        | boost::adaptors::strided(2)
+        | boost::adaptors::transformed([](auto n) { return n * 2; })
+        , std::ostream_iterator<int>(std::cout, " "));
 
 }
 

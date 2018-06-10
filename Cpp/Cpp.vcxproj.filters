@@ -382,4 +382,7 @@
       <Filter>AtCoder\ABC\099</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
