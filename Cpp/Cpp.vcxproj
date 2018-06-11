@@ -226,6 +226,7 @@
     <ClInclude Include="Thread\TestPackagedTask.hpp" />
     <ClInclude Include="Thread\TestThread.hpp" />
     <ClInclude Include="tmp.hpp" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

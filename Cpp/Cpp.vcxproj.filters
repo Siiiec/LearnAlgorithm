@@ -381,6 +381,7 @@
     <ClInclude Include="AtCoder\ABC\099\C.hpp">
       <Filter>AtCoder\ABC\099</Filter>
     </ClInclude>
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
