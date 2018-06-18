@@ -38,7 +38,8 @@ namespace fs = std::filesystem;
 #include <boost/format.hpp>
 #endif
 
-namespace {
+namespace
+{
 
     using ll = long long;
     using ull = unsigned long long;
@@ -50,88 +51,21 @@ namespace {
     template <class T>
     using vv = vec<vec<T>>;
 
-    constexpr std::size_t operator""_sz(ull n) { return std::size_t (n); }
-        
+    constexpr std::size_t operator""_sz(ull n) { return std::size_t(n); }
+
+    //template <class Container>
+    //std::istream& operator>>(std::istream& is, Container& c)
+    //{
+    //    const auto end = std::cend(c);
+    //    for (auto iter = std::cbegin(c); iter != end; ++iter)
+    //        is >> *iter;
+    //    return is;
+    //}
+
     template <class T, class BinaryOperation>
     constexpr T fold(std::initializer_list<T> args, T init, BinaryOperation op)
     {
         return std::accumulate(args.begin(), args.end(), init, op);
-    }
-
-    // numeric_low
-    namespace numeric
-    {
-        template<typename T>
-        constexpr bool isOdd(T x)
-        {
-            return x % 2 != 0;
-        }
-
-        template<typename T>
-        constexpr bool isEven(T x)
-        {
-            return x % 2 == 0;
-        }
-
-        // 最大公約数
-        template<class T>
-        constexpr T gcd(const T x, const T y)
-        {
-            if (x < 0)return gcd(-x, y);
-            if (y < 0)return gcd(x, -y);
-            return (!y) ? x : gcd(y, x % y);
-        }
-
-        // 最小公倍数
-        template<class T>
-        constexpr T lcm(const T x, const T y)
-        {
-            if (x < 0)return lcm(-x, y);
-            if (y < 0)return lcm(x, -y);
-            return x * (y / gcd(x, y));
-        }
-
-        // 素数判定
-        template<class T>
-        constexpr bool isPrime(const T x)
-        {
-            if (x <= 1)return false;
-            for (T i = 2; i * i <= x; ++i)
-                if (x % i == 0)
-                    return false;
-            return true;
-        }
-    }
-
-    // ビット演算
-    namespace bitOp
-    {
-
-        template <int N>
-        constexpr std::size_t distanceBetween(const std::bitset<N> bit, std::size_t current, bool isNext = true)
-        {
-            if (current > N || current < 0) 
-                return -1;
-            const int dir = isNext ? 1 : -1;
-            for (auto i = current + dir; i >= 0 && i < N; i += dir)
-                if (bit[i]) 
-                    return (i - current) * dir;
-            return -1;
-        }
-
-        // 次の立っているビットまでの距離
-        template <int N>
-        constexpr std::size_t distanceBetweenNext(const std::bitset<N> bit, std::size_t current)
-        {
-            return distanceBetween(bit, current, true);
-        }
-
-        // 前の立っているビットまでの距離
-        template <int N>
-        constexpr std::size_t distanceBetweenPrev(const std::bitset<N> bit, std::size_t current)
-        {
-            return distanceBetween(bit, current, false);
-        }
     }
 
 
@@ -322,32 +256,42 @@ namespace {
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
-    template <class Container>
-    std::istream& operator>>(std::istream& is, Container& c)
-    {
-        const auto end = std::end(c);
-        for (auto iter = std::begin(c); iter != end; ++iter)
-            is >> *iter;
-        return is;
-    }
-
-    using bit = std::bitset<10>;
-
-
-
-
     void solve()
     {
         using namespace std;
 
-        
+        ll n, m;
+        cin >> n >> m;
+        array<priority_queue<ll>, 8> pq;
 
-        constexpr bit b {0b101000101};
+        for (int i = 0; i < n; ++i)
+        {
+            ll x, y, z;
+            cin >> x >> y >> z;
 
-        constexpr auto adfsfsd = bitOp::distanceBetweenNext(b, 3);
+            int index {};
+            for (int ix = -1; ix <= 1; ix += 2)
+                for (int iy = -1; iy <= 1; iy += 2)
+                    for (int iz = -1; iz <= 1; iz += 2)
+                    {
+                        pq[index++].emplace(x * ix + y * iy + z * iz);
+                    }
+        }
 
-        cout << bitOp::distanceBetweenNext(b, 2);
+        array<ll, 8> sum {};
 
+        for (int i = 0; i < 8; ++i)
+            for (int mIndex = 0; mIndex < m; ++mIndex)
+            {
+                sum[i] += pq[i].top(); pq[i].pop();
+            }
+
+        cout << accumulate(sum.cbegin(), sum.cend(), 0ll,
+            [](ll init, ll x)
+            {
+                return max(init, x);
+            })
+            << endl;
     }
 }
 

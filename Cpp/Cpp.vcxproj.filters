@@ -100,6 +100,9 @@
     <Filter Include="AtCoder\ABC\099">
       <UniqueIdentifier>{2d28941e-084e-4131-93b6-85d2c07e59de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AtCoder\ABC\100">
+      <UniqueIdentifier>{37fb76bb-72ec-44e8-a158-72eff95f4d3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AOJ\ALDS1\6_SortII\A_CountingSort.hpp">
@@ -382,6 +385,9 @@
       <Filter>AtCoder\ABC\099</Filter>
     </ClInclude>
     <ClInclude Include="Vector.hpp" />
+    <ClInclude Include="AtCoder\ABC\100\D.hpp">
+      <Filter>AtCoder\ABC\100</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
