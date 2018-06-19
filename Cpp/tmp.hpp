@@ -20,6 +20,7 @@
 #include <memory>
 #include <random>
 #include <fstream>
+#include <cctype>
 
 #if (__cplusplus >= 201703L)
 #include <filesystem>
@@ -322,31 +323,34 @@ namespace {
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
-    template <class Container>
-    std::istream& operator>>(std::istream& is, Container& c)
-    {
-        const auto end = std::end(c);
-        for (auto iter = std::begin(c); iter != end; ++iter)
-            is >> *iter;
-        return is;
-    }
-
-    using bit = std::bitset<10>;
-
-
-
+    //template <class Container>
+    //std::istream& operator>>(std::istream& is, Container& c)
+    //{
+    //    const auto end = std::end(c);
+    //    for (auto iter = std::begin(c); iter != end; ++iter)
+    //        is >> *iter;
+    //    return is;
+    //}
+    
 
     void solve()
     {
         using namespace std;
 
-        
+        int n, k;
+        cin >> n >> k;
 
-        constexpr bit b {0b101000101};
+        vec<int> v(n);
 
-        constexpr auto adfsfsd = bitOp::distanceBetweenNext(b, 3);
+        for (auto& x : v)
+            cin >> x;
 
-        cout << bitOp::distanceBetweenNext(b, 2);
+        cout << accumulate(v.cbegin(), v.cend(), 0, 
+            [k](int init, int x) 
+            {
+                return init + min(x, k - x) * 2;
+            })
+            << endl;
 
     }
 }
