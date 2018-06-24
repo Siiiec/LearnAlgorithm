@@ -20,7 +20,7 @@
 #include <memory>
 #include <random>
 #include <fstream>
-#include <cctype>
+#include <locale>
 
 #if (__cplusplus >= 201703L)
 #include <filesystem>
@@ -323,35 +323,75 @@ namespace {
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
-    //template <class Container>
-    //std::istream& operator>>(std::istream& is, Container& c)
-    //{
-    //    const auto end = std::end(c);
-    //    for (auto iter = std::begin(c); iter != end; ++iter)
-    //        is >> *iter;
-    //    return is;
-    //}
-    
+    constexpr int nil = -1;
+
+    class Game
+    {
+        vec<int> left, right;
+        // dp[l][r] R‚©‚çl,r–‡‚Æ‚Á‚½‚Æ‚«‚ÌæU‚Ì“¾“_
+        vv<int> dp;
+
+    public:
+        Game(const vec<int>& left, const vec<int>&right)
+            : left {left}
+            , right(right)
+            , dp {vv<int>(left.size() + 1, vec<int>(right.size() + 1, nil))}
+        {
+            dp[left.size()][right.size()] = 0;
+        }
+
+        int exec(int l, int r)
+        {
+            using std::min, std::max;
+
+            if (l > left.size() && r > right.size())
+                return 0;
+
+            if (dp[l][r] != nil)
+                return dp[l][r];
+
+            if ((l + r) % 2 == 0)
+            {
+                if (l >= left.size())
+                    dp[0][r] = exec(0, r + 1) + right[right.size() - r];
+                else if (r >= right.size())
+                    dp[l][0] = exec(l + 1, 0) + left[left.size() - l];
+                else
+                    dp[l][r] = max(exec(l + 1, r) + left[left.size() - l], exec(l, r + 1) + right[right.size() - r]);
+                
+            }
+            else
+            {
+                if (l >= left.size())
+                    dp[0][r] = exec(0, r + 1) + right[right.size() - r];
+                else if (r >= right.size())
+                    dp[l][0] = exec(l + 1, 0) + left[left.size() - l];
+                else
+                    dp[l][r] = min(exec(l + 1, r) + left[left.size() - l], exec(l, r + 1) + right[right.size() - r]);
+            }
+            
+            return dp[l][r];
+        }
+
+
+    };
 
     void solve()
     {
         using namespace std;
+        int l, r;
+        cin >> l >> r;
 
-        int n, k;
-        cin >> n >> k;
-
-        vec<int> v(n);
-
-        for (auto& x : v)
+        vec<int> A(l), B(r);
+        for (auto& x : A)
+            cin >> x;
+        for (auto& x : B)
             cin >> x;
 
-        cout << accumulate(v.cbegin(), v.cend(), 0, 
-            [k](int init, int x) 
-            {
-                return init + min(x, k - x) * 2;
-            })
-            << endl;
+        Game g {A, B};
 
+        cout << g.exec(0, 0) << endl;
+        int aaa;
     }
 }
 
