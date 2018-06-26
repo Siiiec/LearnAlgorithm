@@ -376,68 +376,65 @@ namespace {
     {
         using namespace std;
 
-        //int N, K;
-        //cin >> N >> K;
+        int N, K;
+        cin >> N >> K;
 
-        //vec<int> a(N);
-        //for (auto& x : a)
-        //    cin >> x;
-        //
-        //// dp[i + 1][j] 左からi番目まで使用してjが作れるか
-        //vv<bool> dpl(N + 1, vec<bool>(K + 1, false));
-        //// dp[i + 1][j] (a[i], a[N - 1]]まで使用してjが作れるか
-        //vv<bool> dpr(N + 1, vec<bool>(K + 1, false));
+        vec<int> a(N);
+        for (auto& x : a)
+            cin >> x;
+        
+        // dp[i + 1][j] 左からi番目まで使用してjが作れるか
+        vv<bool> dpl(N + 1, vec<bool>(K + 1, false));
+        // dp[i + 1][j] (a[i], a[N - 1]]まで使用してjが作れるか
+        vv<bool> dpr(N + 1, vec<bool>(K + 1, false));
 
-        //for (int i = 0; i <= N; ++i)
-        //{
-        //    dpl[i][0] = true;
-        //}
-
-        //// 左からDP
-        //for (int i = 0; i < N; ++i)
-        //    for (int j = 0; j <= K; ++j)
-        //    {
-        //        dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j];
-        //        if (j >= a[i])
-        //            dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j - a[i]];
-        //    }
-
-        //for (int i = 0; i <= N; ++i)
-        //{
-        //    dpr[i][0] = true;
-        //}
-
-        //// 右からDP
-        //for (int i = N; i > 0; --i)
-        //    for (int j = 0; j <= K; ++j)
-        //    {
-        //        dpr[i - 1][j] = dpr[i - 1][j] | dpr[i][j];
-        //        if (j >= a[i - 1])
-        //            dpr[i - 1][j] = dpr[i - 1][j] | dpr[i][j - a[i - 1]];
-        //    }
-
-        //cout << ::hash(1, 3);
-
-        //int no_needed {};
-
-        Vec2D<double> x {1, 0};
-        Vec2D<double> y {0, 1};
-
-        auto xy = Vec2D<double>::Cross(x, y);
-
-
-        auto printVec = [](Vec2D<double> v)
+        for (int i = 0; i <= N; ++i)
         {
-            printAll({v.x, v.y}, " ");
-            cout << endl;
-        };
+            dpl[i][0] = true;
+        }
 
-        printVec(x * 10);
-        printVec(10 * x);
+        // 左からDP
+        for (int i = 0; i < N; ++i)
+            for (int j = 0; j <= K; ++j)
+            {
+                dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j];
+                if (j >= a[i])
+                    dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j - a[i]];
+            }
 
-        printVec(x / 2.0);
-        printVec(x - 4.0 * y);
+        for (int i = 0; i <= N; ++i)
+        {
+            dpr[i][0] = true;
+        }
 
+        // 右からDP
+        for (int i = N; i > 0; --i)
+            for (int j = 0; j <= K; ++j)
+            {
+                dpr[i - 1][j] = dpr[i - 1][j] | dpr[i][j];
+                if (j >= a[i - 1])
+                    dpr[i - 1][j] = dpr[i - 1][j] | dpr[i][j - a[i - 1]];
+            }
+
+        int no_needed {};
+
+        for (int i = 0; i < N; ++i)
+        {
+            bool needed = false;
+            for (int t = 0; t < i; ++t)
+                for (int s = i; s <= N; ++s)
+                {
+                    int sum = dpl[i][t] + dpr[i][s];
+                    if (sum >= K - a[i] && sum < K)
+                        needed = true;
+                }
+
+            if (!needed)
+                ++no_needed;
+            
+        }
+
+        cout << no_needed << endl;
 
     }
 }
