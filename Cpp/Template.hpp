@@ -50,7 +50,7 @@ using vv = vec<vec<T>>;
 constexpr std::size_t operator""_sz(ull n) { return std::size_t(n); }
 
 template <class T, class BinaryOperation>
-constexpr T foldr(std::initializer_list<T> args, T init, BinaryOperation op)
+constexpr T fold(std::initializer_list<T> args, T init, BinaryOperation op)
 {
     return std::accumulate(args.begin(), args.end(), init, op);
 }
@@ -197,7 +197,7 @@ inline Vec2D<T> operator*(U rhs, Vec2D<T> v)
 template <class... Args>
 size_t hash(Args... args)
 {
-    return foldr({static_cast<size_t>(args)...}, 0_sz,
+    return fold({static_cast<size_t>(args)...}, 0_sz,
         [](auto seed, auto x)
         {
             // uses magic number from boost
