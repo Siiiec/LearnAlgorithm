@@ -328,7 +328,7 @@ namespace {
     class Game
     {
         vec<int> left, right;
-        // dp[l][r] 山からl,r枚とったときの先攻の得点
+        // dp[l][r] 山札からl,r枚とっているときの得られる価値の合計
         vv<int> dp;
 
     public:
@@ -337,38 +337,61 @@ namespace {
             , right(right)
             , dp {vv<int>(left.size() + 1, vec<int>(right.size() + 1, nil))}
         {
-            dp[left.size()][right.size()] = 0;
+            dp[0][0] = 0;
         }
 
         int exec(int l, int r)
         {
             using std::min, std::max;
-
-            if (l > left.size() && r > right.size())
-                return 0;
+            
+            l = max(l, 0);
+            r = max(r, 0);
 
             if (dp[l][r] != nil)
                 return dp[l][r];
 
+
             if ((l + r) % 2 == 0)
             {
-                if (l >= left.size())
-                    dp[0][r] = exec(0, r + 1) + right[right.size() - r];
-                else if (r >= right.size())
-                    dp[l][0] = exec(l + 1, 0) + left[left.size() - l];
-                else
-                    dp[l][r] = max(exec(l + 1, r) + left[left.size() - l], exec(l, r + 1) + right[right.size() - r]);
-                
+                if (l > 0 && r > 0)
+                    dp[l][r] = max(exec(l - 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
+                else if (l == 0)
+                    dp[l][r] = exec(l, r - 1) + right[r - 1];
+                else if (r == 0)
+                    dp[l][r] = exec(l - 1, r) + left[l - 1];
             }
             else
             {
-                if (l >= left.size())
-                    dp[0][r] = exec(0, r + 1) + right[right.size() - r];
-                else if (r >= right.size())
-                    dp[l][0] = exec(l + 1, 0) + left[left.size() - l];
-                else
-                    dp[l][r] = min(exec(l + 1, r) + left[left.size() - l], exec(l, r + 1) + right[right.size() - r]);
+                if (l > 0 && r > 0)
+                    dp[l][r] = min(exec(l - 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
+                else if (l == 0)
+                    dp[l][r] = exec(l, r - 1);
+                else if (r == 0)
+                    dp[l][r] = exec(l - 1, r);
             }
+                
+
+
+            //if ((l + r) % 2 != 0)
+            //{
+            //    //すぬけ
+            //    if (l < left.size() && r < right.size())
+            //        dp[l][r] = max(exec(l + 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
+            //    if (l >= left.size())
+            //        dp[left.size()][r] = exec(left.size(), r - 1) + right[r - 1];
+            //    else if (r >= right.size())
+            //        dp[l][right.size()] = exec(l - 1, right.size()) + left[l];
+            //        
+            //}
+            //else
+            //{
+            //    if (l < left.size() && r < right.size())
+            //        dp[l][r] = min(exec(l - 1, r) + left[l], exec(l, r - 1) + right[r -1]);
+            //    if (l >= left.size())
+            //        dp[left.size()][r] = exec(left.size(), r - 1);
+            //    else if (r >= right.size())
+            //        dp[l][right.size()] = exec(l - 1, right.size());                    
+            //}
             
             return dp[l][r];
         }
@@ -390,7 +413,7 @@ namespace {
 
         Game g {A, B};
 
-        cout << g.exec(0, 0) << endl;
+        cout << g.exec(l, r) << endl;
         int aaa;
     }
 }
