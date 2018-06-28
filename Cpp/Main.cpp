@@ -6,7 +6,6 @@
 
 int main()
 {
-    std::cout << 321 << std::endl;
-
+    solve();
     return 0;
 }

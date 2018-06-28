@@ -39,7 +39,8 @@ namespace fs = std::filesystem;
 #include <boost/format.hpp>
 #endif
 
-namespace {
+namespace
+{
 
     using ll = long long;
     using ull = unsigned long long;
@@ -51,8 +52,8 @@ namespace {
     template <class T>
     using vv = vec<vec<T>>;
 
-    constexpr std::size_t operator""_sz(ull n) { return std::size_t (n); }
-        
+    constexpr std::size_t operator""_sz(ull n) { return std::size_t(n); }
+
     template <class T, class BinaryOperation>
     constexpr T fold(std::initializer_list<T> args, T init, BinaryOperation op)
     {
@@ -111,11 +112,11 @@ namespace {
         template <int N>
         constexpr std::size_t distanceBetween(const std::bitset<N> bit, std::size_t current, bool isNext = true)
         {
-            if (current > N || current < 0) 
+            if (current > N || current < 0)
                 return -1;
             const int dir = isNext ? 1 : -1;
             for (auto i = current + dir; i >= 0 && i < N; i += dir)
-                if (bit[i]) 
+                if (bit[i])
                     return (i - current) * dir;
             return -1;
         }
@@ -294,10 +295,10 @@ namespace {
     {
         return fold({static_cast<std::size_t>(args)...}, 0_sz,
             [](std::size_t seed, std::size_t x)
-            {
-                // uses magic number from boost
-                return seed ^= x + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-            });
+        {
+            // uses magic number from boost
+            return seed ^= x + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+        });
     }
 
     template <class Begin, class End>
@@ -323,105 +324,64 @@ namespace {
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
-    constexpr int nil = -1;
-
-    class Game
+    auto pow = [](int x, int y)
     {
-        vec<int> left, right;
-        // dp[l][r] 山札からl,r枚とっているときの得られる価値の合計
-        vv<int> dp;
-
-    public:
-        Game(const vec<int>& left, const vec<int>&right)
-            : left {left}
-            , right(right)
-            , dp {vv<int>(left.size() + 1, vec<int>(right.size() + 1, nil))}
-        {
-            dp[0][0] = 0;
-        }
-
-        int exec(int l, int r)
-        {
-            using std::min, std::max;
-            
-            l = max(l, 0);
-            r = max(r, 0);
-
-        //// 左からDP
-        //for (int i = 0; i < N; ++i)
-        //    for (int j = 0; j <= K; ++j)
-        //    {
-        //        dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j];
-        //        if (j >= a[i])
-        //            dpl[i + 1][j] = dpl[i + 1][j] | dpl[i][j - a[i]];
-        //    }
-
-
-            if ((l + r) % 2 == 0)
-            {
-                if (l > 0 && r > 0)
-                    dp[l][r] = max(exec(l - 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
-                else if (l == 0)
-                    dp[l][r] = exec(l, r - 1) + right[r - 1];
-                else if (r == 0)
-                    dp[l][r] = exec(l - 1, r) + left[l - 1];
-            }
-            else
-            {
-                if (l > 0 && r > 0)
-                    dp[l][r] = min(exec(l - 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
-                else if (l == 0)
-                    dp[l][r] = exec(l, r - 1);
-                else if (r == 0)
-                    dp[l][r] = exec(l - 1, r);
-            }
-                
-
-
-            //if ((l + r) % 2 != 0)
-            //{
-            //    //すぬけ
-            //    if (l < left.size() && r < right.size())
-            //        dp[l][r] = max(exec(l + 1, r) + left[l - 1], exec(l, r - 1) + right[r - 1]);
-            //    if (l >= left.size())
-            //        dp[left.size()][r] = exec(left.size(), r - 1) + right[r - 1];
-            //    else if (r >= right.size())
-            //        dp[l][right.size()] = exec(l - 1, right.size()) + left[l];
-            //        
-            //}
-            //else
-            //{
-            //    if (l < left.size() && r < right.size())
-            //        dp[l][r] = min(exec(l - 1, r) + left[l], exec(l, r - 1) + right[r -1]);
-            //    if (l >= left.size())
-            //        dp[left.size()][r] = exec(left.size(), r - 1);
-            //    else if (r >= right.size())
-            //        dp[l][right.size()] = exec(l - 1, right.size());                    
-            //}
-            
-            return dp[l][r];
-        }
-
-        int no_needed {};
-
+        int ans = 1;
+        for (; y > 0; --y)
+            ans *= x;
+        return ans;
     };
+
+    // id: i, k ラウンドで当たる人の半開区間
+    std::pair<int, int> scope(int i, int k)
+    {
+        int range = pow(2, k - 1);
+        int block = i / range;
+
+        if (block % 2 == 0)
+        {
+            return {range * (block + 1), range * (block + 2)};
+        }
+        else
+        {
+            return {range * (block - 1), range * block};
+        }
+    }
+
+    long double P(int rate1, int rate2)
+    {
+        return 1.0 / (1 + std::pow(10.0l, (rate2 - rate1) / 400.0l));
+    }
 
     void solve()
     {
         using namespace std;
-        int l, r;
-        cin >> l >> r;
+        
+        int K;
+        cin >> K;
 
-        vec<int> A(l), B(r);
-        for (auto& x : A)
+        vec<int> r(pow(2, K));
+        for (auto& x : r)
             cin >> x;
-        for (auto& x : B)
-            cin >> x;
 
-        Game g {A, B};
+        // dp[i][j]: 人iが第jラウンドで勝つ確率
+        vv<long double> dp(r.size(), vec<long double>(K + 1, 0));
 
-        cout << g.exec(l, r) << endl;
-        int aaa;
+        for (int i = 0; i < r.size(); ++i)
+            dp[i][0] = 1.0;
+
+        for (int j = 1; j <= K; ++j)
+            for (int i = 0; i < r.size(); ++i)
+            {
+                long double winP = 0.0;
+                auto range = scope(i, j);
+                for (int x = range.first; x < range.second; ++x)
+                    winP += P(r[i], r[x]) * dp[x][j - 1];
+                dp[i][j] = dp[i][j - 1] * winP;
+            }
+
+        for (int i = 0; i < r.size(); ++i)
+            cout << fixed << setprecision(9) << dp[i][K] << endl;
     }
 }
 
