@@ -324,64 +324,64 @@ namespace
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
-    auto pow = [](int x, int y)
-    {
-        int ans = 1;
-        for (; y > 0; --y)
-            ans *= x;
-        return ans;
-    };
-
-    // id: i, k ラウンドで当たる人の半開区間
-    std::pair<int, int> scope(int i, int k)
-    {
-        int range = pow(2, k - 1);
-        int block = i / range;
-
-        if (block % 2 == 0)
-        {
-            return {range * (block + 1), range * (block + 2)};
-        }
-        else
-        {
-            return {range * (block - 1), range * block};
-        }
-    }
-
-    long double P(int rate1, int rate2)
-    {
-        return 1.0 / (1 + std::pow(10.0l, (rate2 - rate1) / 400.0l));
-    }
-
     void solve()
     {
         using namespace std;
         
-        int K;
-        cin >> K;
+        int n, q;
+        cin >> n >> q;
 
-        vec<int> r(pow(2, K));
-        for (auto& x : r)
-            cin >> x;
+        ll inf = 10000000000;
 
-        // dp[i][j]: 人iが第jラウンドで勝つ確率
-        vv<long double> dp(r.size(), vec<long double>(K + 1, 0));
+        // イテレータが範囲外に行かないよう上限、下限を設定
+        vec<ll> X;
+        X.push_back(-inf);
+        for (int i = 0; i < n; ++i)
+        {
+            int in;
+            cin >> in;
+            X.push_back(in);
+        }
+        X.push_back(10000000000000000);
+        
+        // 累積和
+        vec<ll> psumX;
+        partial_sum(X.cbegin(), X.cend(), back_inserter(psumX));
 
-        for (int i = 0; i < r.size(); ++i)
-            dp[i][0] = 1.0;
+        for (int i = 0; i < q; ++i)
+        {
+            ll c, d;
+            cin >> c >> d;
 
-        for (int j = 1; j <= K; ++j)
-            for (int i = 0; i < r.size(); ++i)
-            {
-                long double winP = 0.0;
-                auto range = scope(i, j);
-                for (int x = range.first; x < range.second; ++x)
-                    winP += P(r[i], r[x]) * dp[x][j - 1];
-                dp[i][j] = dp[i][j - 1] * winP;
-            }
+            ll sum {};
 
-        for (int i = 0; i < r.size(); ++i)
-            cout << fixed << setprecision(9) << dp[i][K] << endl;
+            // Xi - c円の範囲
+            auto begin = lower_bound(X.cbegin(), X.cend(), c - d);
+            auto end = upper_bound(X.cbegin(), X.cend(), c + d);
+
+            // d円の人数
+            auto dN = distance(X.cbegin(), begin) + distance(end, X.cend()) - 2;
+
+            sum += dN * d;
+
+            // 範囲内で、c未満
+            auto lBegin = lower_bound(X.cbegin(), X.cend(), c - d) - 1;
+            auto lEnd = lower_bound(X.cbegin(), X.cend(), c) - 1;
+            auto lbIndex = distance(X.cbegin(), lBegin);
+            auto leIndex = distance(X.cbegin(), lEnd);
+            sum += (c * (leIndex - lbIndex)) - (psumX[leIndex] - psumX[lbIndex]);
+
+            // 範囲内で、c以上
+            auto rBegin = lower_bound(X.cbegin(), X.cend(), c) - 1;
+            auto rEnd = upper_bound(X.cbegin(), X.cend(), c + d) - 1;
+            auto rbIndex = distance(X.cbegin(), rBegin);
+            auto reIndex = distance(X.cbegin(), rEnd);
+            sum += (psumX[reIndex] - psumX[rbIndex]) - (c * (reIndex - rbIndex));
+
+            cout << sum << endl;
+        }
+
+        
     }
 }
 
