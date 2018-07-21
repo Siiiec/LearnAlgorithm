@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6599c9bb-20fc-4cf9-8b93-f9cf13b2c57f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TechFUL\01_Beginner\19_printage.py</StartupFile>
+    <StartupFile>Python3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
