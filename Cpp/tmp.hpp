@@ -324,63 +324,42 @@ namespace
         printAll(ini.begin(), ini.end(), delimiter);
     }
 
+    using ld = long double;
+
     void solve()
     {
         using namespace std;
-        
-        int n, q;
-        cin >> n >> q;
 
-        ll inf = 10000000000;
+        int n;
+        int m;
+        cin >> n >> m;
 
-        // イテレータが範囲外に行かないよう上限、下限を設定
-        vec<ll> X;
-        X.push_back(-inf);
-        for (int i = 0; i < n; ++i)
+        using ip = pair<int, int>;
+
+        vec<ip> v(m);
+
+        for (auto& x : v)
+            cin >> x.first >> x.second;
+
+        sort(v.begin(), v.end(), 
+            [](ip x, ip y)
+            {
+                return x.second < y.second;
+            });
+
+        vec<int> selected {};
+
+        for (int i = 0; i < m; ++i)
         {
-            int in;
-            cin >> in;
-            X.push_back(in);
-        }
-        X.push_back(10000000000000000);
-        
-        // 累積和
-        vec<ll> psumX;
-        partial_sum(X.cbegin(), X.cend(), back_inserter(psumX));
+            if (!selected.empty() && selected.back() > v[i].first)
+                continue;
 
-        for (int i = 0; i < q; ++i)
-        {
-            ll c, d;
-            cin >> c >> d;
+            selected.push_back(v[i].second);
 
-            ll sum {};
-
-            // Xi - c円の範囲
-            auto begin = lower_bound(X.cbegin(), X.cend(), c - d);
-            auto end = upper_bound(X.cbegin(), X.cend(), c + d);
-
-            // d円の人数
-            auto dN = distance(X.cbegin(), begin) + distance(end, X.cend()) - 2;
-
-            sum += dN * d;
-
-            // 範囲内で、c未満
-            auto lBegin = lower_bound(X.cbegin(), X.cend(), c - d) - 1;
-            auto lEnd = lower_bound(X.cbegin(), X.cend(), c) - 1;
-            auto lbIndex = distance(X.cbegin(), lBegin);
-            auto leIndex = distance(X.cbegin(), lEnd);
-            sum += (c * (leIndex - lbIndex)) - (psumX[leIndex] - psumX[lbIndex]);
-
-            // 範囲内で、c以上
-            auto rBegin = lower_bound(X.cbegin(), X.cend(), c) - 1;
-            auto rEnd = upper_bound(X.cbegin(), X.cend(), c + d) - 1;
-            auto rbIndex = distance(X.cbegin(), rBegin);
-            auto reIndex = distance(X.cbegin(), rEnd);
-            sum += (psumX[reIndex] - psumX[rbIndex]) - (c * (reIndex - rbIndex));
-
-            cout << sum << endl;
         }
 
+        cout << selected.size() << endl;
+        
         
     }
 }
